@@ -19,11 +19,16 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Opis", name: "description", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
-      - label: "News"
-        name: "news"
-        widget: "object"
-        allow_add: true
+      - label: "News List"
+        name: "news-list"
+        widget: "list"
+        allow_add: false
         fields:
-          - {label: "News tytuł", name: "news-title", widget: string}
-          - {label: "News tło", name: "news-background", widget: image}
-          - {label: "News link", name: "news-link", widget: string}
+          - label: "News"
+            name: "news"
+            widget: "object"
+            allow_add: true
+            fields:
+              - {label: "News tytuł", name: "news-title", widget: string}
+              - {label: "News tło", name: "news-background", widget: image}
+              - {label: "News link", name: "news-link", widget: string}
