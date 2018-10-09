@@ -12,10 +12,17 @@ collections:
     label: "Landing"
     label_singular: "Landing"
     folder: "_landing"
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - label: News
-        name: news
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Opis", name: "description", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
+      - label: "News"
+        name: "news"
         widget: "list"
+        allow_add: true
         fields:
           - {label: "News tytuł", name: "news-title", widget: string}
           - {label: "News tło", name: "news-background", widget: image}
