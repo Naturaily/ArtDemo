@@ -19,13 +19,13 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Opis", name: "description", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
-      - label: "Lista newsów"
+      - label: "Newsy"
         name: "news-list"
+        label_singular: "News"
         widget: "list"
         allow_add: true
         fields:
-          - label: "News"
-            name: "news"
+          - name: "news"
             widget: "object"
             fields:
               - {label: "News tytuł", name: "news-title", widget: string}
