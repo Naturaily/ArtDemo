@@ -21,9 +21,8 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
       - label: "News List"
         name: "news-list"
-        widget: "list"
-        allow_add: false
-        default: ["News"]
+        widget: "object"
+        allow_add: true
         fields:
           - label: "News"
             name: "news"
