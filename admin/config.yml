@@ -22,12 +22,12 @@ collections:
       - label: "News List"
         name: "news-list"
         widget: "list"
-        allow_add: false
+        allow_add: true
         fields:
           - label: "News"
             name: "news"
             widget: "object"
-            allow_add: true
+            allow_add: false
             fields:
               - {label: "News tytuł", name: "news-title", widget: string}
               - {label: "News tło", name: "news-background", widget: image}
