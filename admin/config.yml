@@ -12,7 +12,6 @@ collections:
     label: "Landing"
     label_singular: "Landing"
     folder: "_landing"
-    create: false
     fields:
       - label: News
         name: news
