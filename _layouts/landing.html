@@ -1,12 +1,22 @@
 ---
 layout: default
 ---
-
-<div class="siema">
-  {%- for news in page.news -%}
-    <div class="news-element" style="background-image: url({{page.news-background}})">
-      <span>artinfo news</span>
-      <p>{{news-title}}</p>
-    </div>
-  {%- endfor -%}
-</div>
+{%- if page.news -%}
+  <div class="siema">
+    {%- for news in page.news -%}
+      <div class="news-element" style="background-image: url({{page.news-background}})">
+        <span>artinfo news</span>
+        <p>{{news-title}}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+  <script>
+    var Siemano = new Siema({
+      duration: 200,
+      draggable: false,
+      multipleDrag: false,
+      loop: true
+    });
+    setInterval(() => Siemano.next(), 1500)
+  </script>
+{%- endif -%}
