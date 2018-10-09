@@ -5,3 +5,19 @@ backend:
 publish_mode: editorial_workflow
 
 media_folder: "assets/images"
+
+collections:
+  -
+    name: "landing"
+    label: "Landing"
+    label_singular: "Landing"
+    folder: "_landing"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - label: News
+        name: news
+        widget: "list"
+        - {label: "News tytuł", name: "news-title", widget: string}
+        - {label: "News tło", name: "news-background", widget: image}
+        - {label: "News link", name: "news-link", widget: string}

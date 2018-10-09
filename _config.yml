@@ -24,9 +24,24 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+collections:
+  landing:
+    output: true
+    permalink: /
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'landing'
+    values:
+      layout: 'landing'
+      title: ' '
+      variable: ''
+
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-basically-basic
+theme: minima
 plugins:
   - jekyll-feed
 
