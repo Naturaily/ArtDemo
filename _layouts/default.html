@@ -5,15 +5,6 @@
     {% include header.html %}
     <main>
       <div class="wrapper">
-        <div class="siema">
-          {%- for news in page.news -%}
-            <div class="news-element" style="background-image: url({{page.news_image}})">
-              <span>artinfo news</span>
-              <p>Tekst</p>
-            </div>
-          {%- endfor -%}
-        </div>
-
         {{ content }}
       </div>
     </main>
