@@ -18,6 +18,6 @@ collections:
       - label: News
         name: news
         widget: "list"
-        - {label: "News tytuł", name: "news-title", widget: string}
-        - {label: "News tło", name: "news-background", widget: image}
-        - {label: "News link", name: "news-link", widget: string}
+          - {label: "News tytuł", name: "news-title", widget: string}
+          - {label: "News tło", name: "news-background", widget: image}
+          - {label: "News link", name: "news-link", widget: string}
