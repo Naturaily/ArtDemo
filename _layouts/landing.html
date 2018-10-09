@@ -1,13 +1,17 @@
 ---
 layout: default
 ---
-{%- if page.news -%}
+{%- if page.news-list -%}
   <div class="siema">
-    {%- for news in page.news -%}
-      <div class="news-element" style="background-image: url({{page.news-background}})">
+    {%- for news-object in page.news-list -%}
+    {% assign news-field = news-object.news %}
+
+      <div class="news-element" style="background-image: url({{news-field.background}})">
         <span>artinfo news</span>
-        <p>{{news-title}}</p>
+        <p>{{news-field.title}}</p>
+        <a href="{{news-field.link}}">{{news-field.link}}</a>
       </div>
+
     {%- endfor -%}
   </div>
   <script>
