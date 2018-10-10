@@ -4,7 +4,7 @@ layout: default
 {%- if page.news-list -%}
   <div class="siema">
     {%- for news-object in page.news-list -%}
-    {% assign news-field = news-object.news %}
+      {% assign news-field = news-object.news %}
 
       <div class="news-element" style="background-image: url({{news-field.background}})">
         <span>artinfo news</span>
