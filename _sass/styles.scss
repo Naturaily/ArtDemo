@@ -10,13 +10,16 @@
   min-height: 105px;
   -webkit-box-shadow: 0 4px 4px -2px rgba(92,94,102,0.15);
   box-shadow: 0 4px 4px -2px rgba(92,94,102,0.15);
-  margin-bottom: 3rem;
   position: relative;
   z-index: 1;
 
   .wrapper {
     padding-top: 25px;
   }
+}
+
+a {
+  color: #e9662b;
 }
 
 .site-title {
@@ -27,9 +30,45 @@
   width: 70%;
 }
 
-.news-element {
-  min-height: 300px;
-  background-size: cover;
+.news {
+  &-element {
+    min-height: 300px;
+    background-size: cover;
+    position: relative;
+  }
+
+  &-box {
+    background: rgba(0,0,0,0.7);
+    border-radius: 5px;
+    color: white;
+    height: auto;
+    left: 40px;
+    position: absolute;
+    top: 40px;
+    width: 330px;
+    padding: 10px 15px;
+    padding-right: 50px;
+
+    span {
+      font-size: 10px;
+      color: #81848d;
+      position: relative;
+      top: -9px;
+    }
+
+    h2 {
+      line-height: 1;
+      margin: 0;
+    }
+
+    a {
+      text-align: right;
+      font-size: 12px;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
 }
 
 .adv-wrapper {

@@ -7,9 +7,11 @@ layout: default
       {% assign news-field = news-object.news %}
 
       <div class="news-element" style="background-image: url({{news-field.background}})">
-        <span>artinfo news</span>
-        <p>{{news-field.title}}</p>
-        <a href="{{news-field.link}}">{{news-field.link}}</a>
+        <div class="news-box">
+          <span>artinfo news</span>
+          <h2>{{news-field.title}}</h2>
+          <a href="{{news-field.link}}">{{news-field.link}}</a>
+        </div>
       </div>
 
     {%- endfor -%}
