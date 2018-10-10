@@ -13,12 +13,14 @@
   margin-bottom: 3rem;
   position: relative;
   z-index: 1;
+
+  .wrapper {
+    padding-top: 25px;
+  }
 }
 
 .site-title {
-  img {
-    width: 100%;
-  }
+  width: 190px;
 }
 
 .siema {
