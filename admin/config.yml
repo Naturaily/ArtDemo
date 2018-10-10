@@ -35,5 +35,5 @@ collections:
         name: "advert-first"
         widget: "object"
         fields:
-          - {label: "News tytuł", name: "advert-first-image", widget: image}
-          - {label: "News tło", name: "advert-first-link", widget: image}
+          - {label: "Reklama obrazek", name: "advert-first-image", widget: image}
+          - {label: "Reklama link", name: "advert-first-link", widget: string}
