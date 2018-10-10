@@ -31,3 +31,9 @@ collections:
               - {label: "News tytuł", name: "title", widget: string}
               - {label: "News tło", name: "background", widget: image}
               - {label: "News link", name: "link", widget: string}
+      - label: "Reklama góra"
+        name: "advert-first"
+        widget: "object"
+        fields:
+          - {label: "News tytuł", name: "advert-first-image", widget: image}
+          - {label: "News tło", name: "advert-first-link", widget: image}
