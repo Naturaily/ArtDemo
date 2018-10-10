@@ -8,5 +8,15 @@
         {{ content }}
       </div>
     </main>
+
+  <script type="text/javascript">
+    $.get(
+        "https://artinfo.naturaily.eu/wyniki-aukcji",
+        {paramOne : 1, paramX : 'abc'},
+        function(data) {
+           alert('page content: ' + data);
+        }
+    );
+  </script>
   </body>
 </html>
