@@ -44,9 +44,10 @@ defaults:
     values:
       layout: 'post'
       description: ' '
+      image: ''
 
 
-permalink: /news/:title
+permalink: /news/:slug
 # Build settings
 markdown: kramdown
 theme: minima

@@ -16,4 +16,3 @@ advert-first:
   advert-first-image: /assets/images/550x350.png
   advert-first-link: www.reklama.pl
 ---
-

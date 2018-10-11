@@ -51,3 +51,4 @@ collections:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Obrazek", name: "image", widget: image}

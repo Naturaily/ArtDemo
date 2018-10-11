@@ -153,3 +153,21 @@ a, a:visited {
     height: 100%;
   }
 }
+
+.news__latest {
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8
+  }
+
+  &-text {
+    background: white;
+    bottom: -110px;
+    left: 25%;
+    padding: 40px;
+    position: absolute;
+    text-align: center;
+  }
+}

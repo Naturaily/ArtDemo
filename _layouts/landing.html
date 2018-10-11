@@ -1,42 +1,47 @@
 ---
 layout: default
 ---
-{%- if page.news-list -%}
-  <div class="siema">
-    {%- for news-object in page.news-list -%}
-      {% assign news-field = news-object.news %}
+<div class="wrapper">
+  {%- if page.news-list -%}
+    <div class="siema">
+      {%- for news-object in page.news-list -%}
+        {% assign news-field = news-object.news %}
 
-      <div class="news-element" style="background-image: url({{news-field.background}})">
-        <div class="news-box">
-          <span>artinfo news</span>
-          <h2>{{news-field.title}}</h2>
-          <a href="{{news-field.link}}">{{news-field.link}}</a>
+        <div class="news-element" style="background-image: url({{news-field.background}})">
+          <div class="news-box">
+            <span>artinfo news</span>
+            <h2>{{news-field.title}}</h2>
+            <a href="{{news-field.link}}">{{news-field.link}}</a>
+          </div>
         </div>
-      </div>
 
-    {%- endfor -%}
+      {%- endfor -%}
+    </div>
+    <script>
+      var Siemano = new Siema({
+        duration: 200,
+        draggable: false,
+        multipleDrag: false,
+        loop: true
+      });
+      setInterval(() => Siemano.next(), 3500)
+    </script>
+  {%- endif -%}
+  <div class="auctions-latest">
+    <h3 class="auctions-latest_heading">
+      Najbliższe aukcje
+      <a href="#" class="auctions-latest__more">Więcej</a>
+    </h3>
+    <ul id="latestAuctions"></ul>
   </div>
-  <script>
-    var Siemano = new Siema({
-      duration: 200,
-      draggable: false,
-      multipleDrag: false,
-      loop: true
-    });
-    setInterval(() => Siemano.next(), 3500)
-  </script>
-{%- endif -%}
-<div class="auctions-latest">
-  <h3 class="auctions-latest_heading">
-    Najbliższe aukcje
-    <a href="#" class="auctions-latest__more">Więcej</a>
-  </h3>
-  <ul id="latestAuctions"></ul>
 </div>
-
-
-<div class="adv-wrapper">
-  <a href="{{page.advert-first.advert-first-link}}" class="adv">
-    <img src="{{page.advert-first.advert-first-image}}" alt="">
-  </a>
+<div class="wrapper">
+  <div class="adv-wrapper">
+    <a href="{{page.advert-first.advert-first-link}}" class="adv">
+      <img src="{{page.advert-first.advert-first-image}}" alt="">
+    </a>
+  </div>
+</div>
+<div class="wrapper">
+  {{site.posts.first}}
 </div>
