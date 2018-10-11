@@ -40,15 +40,14 @@ collections:
 
 
   -
-    name: "news-post"
-    label: "News post"
-    label_singular: "News"
-    folder: "_news"
+    name: "post"
+    label: "News"
+    folder: "_posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Description(optimally 150 characters)", name: "description", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Tytuł", name: "title", widget: "string"}
-      - {label: "Opis", name: "description", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "news"}
-      - {label: "Treść", name: "content", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Body", name: "body", widget: "markdown"}

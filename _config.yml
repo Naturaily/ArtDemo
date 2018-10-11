@@ -37,8 +37,16 @@ defaults:
     values:
       layout: 'landing'
       title: ' '
-      variable: ''
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      layout: 'post'
+      description: ' '
 
+
+permalink: /news/:title
 # Build settings
 markdown: kramdown
 theme: minima
