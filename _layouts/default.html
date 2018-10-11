@@ -10,13 +10,32 @@
     </main>
 
   <script type="text/javascript">
-    $.get(
-        "https://artinfo.naturaily.eu/wyniki-aukcji",
-        {paramOne : 1, paramX : 'abc'},
-        function(data) {
-           alert('page content: ' + data);
-        }
-    );
+
+    $.getJSON('https://artinfo.naturaily.eu/api/v1/finished/auctions_catalogs', function (data) {
+
+      const items = data.data.slice(0, 4).map(function (item) {
+        return item.attributes;
+      });
+      items.forEach(latestAuctions);
+      function latestAuctions (auction, index) {
+        const startDate = new Date(auction.pre_auction_exhibition_start).toLocaleDateString("en-UK");
+        $("#latestAuctions").append(`
+          <li>
+            <a href="https://artinfo.naturaily.eu/wyniki-aukcji/${auction.slug}" target="_blank" class="auctions-latest__auction">
+              <div class="auctions-latest__left">
+                <img src="${auction.image_thumb_url}" alt="">
+              </div>
+              <div class="auctions-latest__right">
+                <p>
+                  ${startDate}
+                </p>
+                <h3>${auction.name}</h3>
+              </div>
+            </a>
+          </li>
+          `);
+      }
+    });
   </script>
   </body>
 </html>

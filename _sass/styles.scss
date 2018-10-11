@@ -18,8 +18,22 @@
   }
 }
 
-a {
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a, a:visited {
   color: #e9662b;
+
+  &:hover {
+    color: #e9972b;
+    text-decoration: none;
+  }
 }
 
 .site-title {
@@ -28,11 +42,12 @@ a {
 
 .siema {
   width: 70%;
+  float: left;
 }
 
 .news {
   &-element {
-    min-height: 300px;
+    min-height: 500px;
     background-size: cover;
     position: relative;
   }
@@ -68,7 +83,65 @@ a {
       width: 100%;
     }
   }
+}
 
+.auctions-latest {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 500px;
+  float: right;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 25px;
+  box-sizing: border-box;
+
+  &__auction, &__auction:visited {
+    height: 82px;
+    display: flex;
+    flex-direction: row;
+    color: #363A42;
+    padding: 10px 0;
+    &:hover {
+      color: #363A42;
+      text-decoration: none;
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    max-height: 120px;
+    max-width: 120px;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  &__left {
+    display: flex;
+    width: 82px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 20px;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .adv-wrapper {

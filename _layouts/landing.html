@@ -26,6 +26,14 @@ layout: default
     setInterval(() => Siemano.next(), 3500)
   </script>
 {%- endif -%}
+<div class="auctions-latest">
+  <h3 class="auctions-latest_heading">
+    Najbliższe aukcje
+    <a href="#" class="auctions-latest__more">Więcej</a>
+  </h3>
+  <ul id="latestAuctions"></ul>
+</div>
+
 
 <div class="adv-wrapper">
   <a href="{{page.advert-first.advert-first-link}}" class="adv">

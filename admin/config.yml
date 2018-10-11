@@ -13,10 +13,10 @@ collections:
     label_singular: "Landing"
     folder: "_landing"
     create: false
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: ""
     fields:
       - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Tytuł", name: "title", widget: "string"}
       - {label: "Opis", name: "description", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
       - label: "Newsy"
@@ -37,3 +37,18 @@ collections:
         fields:
           - {label: "Reklama obrazek", name: "advert-first-image", widget: image}
           - {label: "Reklama link", name: "advert-first-link", widget: string}
+
+
+  -
+    name: "news-post"
+    label: "News post"
+    label_singular: "News"
+    folder: "_news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Tytuł", name: "title", widget: "string"}
+      - {label: "Opis", name: "description", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "news"}
+      - {label: "Treść", name: "content", widget: "markdown"}
