@@ -1,9 +1,9 @@
 ---
 layout: blog
-title: 'Sample Post #1'
+title: 'Sample Post #11'
 date: 2018-02-19T00:45:43.212Z
 thumbnail: /uploads/image2.jpg
-rating: '5'
+rating: '3'
 ---
 This is sample post #1.
 
