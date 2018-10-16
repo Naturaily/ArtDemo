@@ -1,69 +1,71 @@
-# Netlify CMS + React Starter
+# React-Static with Netlify CMS | Starter App
 
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![dependencies](https://david-dm.org/jinksi/netlify-cms-react-starter.svg?style=flat-square)](https://david-dm.org/jinksi/netlify-cms-react-starter)
+React-Static Basic template with added configuration for blog post deployment via Netlify CMS and GitHub.
 
-A starter project for creating lightning-fast, offline-first websites with [Netlify CMS](https://netlifycms.org) and React.
+To get started, click below to deploy to Netlify.
 
-* **[Create React App](https://github.com/facebookincubator/create-react-app)**
-* **[React Router](https://github.com/ReactTraining/react-router)** for routing
-* **[React Helmet](https://github.com/nfl/react-helmet)** for document titles, descriptions, meta
-* **[React Snapshot](https://github.com/geelen/react-snapshot)** for pre-rendering to static html so it works without Javascript ⭐️
-* **[Netlify CMS](https://github.com/netlify/netlify-cms)** for content management
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tsgriff/react-static-netlifycms)
 
-I aim to include commonly used components and best-practices e.g. forms, settings, <head> tags, lazy-loading images, etc.
+Or, copy this folder and signup with [Netlify](https://www.netlify.com), click "New site from Git", select GitHub, and add "yarn build" as the "Build command" and "dist" as the "Publish directory".
 
-## Get going
+Your app should now be available as a repository on your GitHub profile.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Jinksi/netlify-cms-react-starter&stack=cms)
+## Authorization and Access to Netlify CMS
 
-1.  Hit the **Deploy to Netlify** button. This will:
+Once your site is deployed to GitHub configure authorization in Netlify by following the instructions below.
 
-* Clone the repo into your Github account
-* Create you a new project on Netlify, build & deploy
+[Information on authentication and logging into Netlify CMS from Netlify's documentation:](https://www.netlifycms.org/docs/add-to-your-site/#authentication)
 
-1.  Once your Netlify project has been created, check a couple of settings:
+1. Go to Settings > Identity, and select Enable Identity service.
 
-* Enable **Identity**
-* Change **Registration Preferences** to **Invite Only**
-* Enable **Git Gateway**
+2. Under Registration preferences, select Open or Invite only. In most cases, you’ll want only invited users to access your CMS, but if you’re just experimenting, you can leave it open for convenience.
 
-1.  Invite users (probably yourself) to enable admin access
+3. If you’d like to allow one-click login with services like Google and GitHub, check the boxes next to the services you’d like to use, under External providers.
 
-* Open the **Identity** tab and hit **Invite Users**
+4. Scroll down to Services > Git Gateway, and click Enable Git Gateway. This will authenticate with GitHub and generate a GitHub API access token. In this case, we’re leaving the Roles field blank, which means any logged in user may access the CMS. 
 
-## Show me the CMS!
+If you set your registration preference to “Invite only,” you’ll need to invite yourself (and anyone else you choose) as a site user. To do this, select the Identity tab from your site dashboard, and then select the Invite users button. Invited users will receive an email invitation with a confirmation link. Clicking the link will take you to your site with a login prompt.
 
-The CMS lives at [\_\_YOUR_SITE_NAME\_\_.netlify.com/admin](https://__YOUR_SITE_NAME__.netlify.com/admin).
+If you left your site registration open, or for return visits after confirming an email invitation, you can access your site’s CMS at "yoursite.com/admin/".
 
-## Developing
+## Accessing Netlify CMS Data
 
-1.  Clone your repo to your local machine
+After you've logged in to the CMS, the fields available for posts are dictated by the public/admin/config.yml file.
+If you'd like to remove any, simply comment out the object. For example, I don't plan on using the thumbnail and rating for each post, so I'll remove (or comment out): 
+<pre> 
+- {label: "Featured Image", name: "thumbnail", widget: "image"}
+- {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+</pre>
+Then, modify the following code in static.config.js to fit the data that the CMS will provide:
+<pre>
+    klaw('./src/posts')
+        .on('data', item => {
+          // Filter function to retrieve .md files //
+          if (path.extname(item.path) === '.md') {
+            // If markdown file, read contents //
+            const data = fs.readFileSync(item.path, 'utf8')
+            // Convert to frontmatter object and markdown content //
+            const dataObj = matter(data)
+            dataObj.content = marked(dataObj.content)
+            // Create slug for URL //
+            dataObj.data.slug = dataObj.data.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
+            // Parse image file name from path //
+            dataObj.data.thumbnail = dataObj.data.thumbnail.replace('/public/uploads/', '')
+            // Push object into items array //
+            items.push(dataObj)
+          }
+        })
+</pre>
+(I'd remove the thumbnail property since I removed it in config.yml)
 
-1.  Install dependencies
+In addition, make sure that no files in src/containers are relying on the removed data.
 
-`yarn` or `npm install`
+When posts are submitted, the file paths are dictated by the public/admin/config.yml file.
 
-1.  Run the development server
+You should now be up-and-running with React-Static and Netlify CMS as a git-based static site generator!
 
-`yarn start` or `npm run start`
+## More Info:
 
-If you are adding or editing content locally in the CMS, a couple of things to note:
+[React-Static GitHub Repository](https://github.com/nozzle/react-static)
 
-1.  Changes will be pushed to the remote repo.
-
-1.  You will be prompted to enter your site's url, this is necessary for Netlify Identity to manage user login. This is stored in `localStorage`, so you might have to empty your browser cache if you are switching projects but remaining on `localhost:3000`.
-
-## Editing CMS fields
-
-The Netlify CMS configuration is located in `public/admin/config.yml`. This is where you will configure the pages, fields, posts and settings that are editable by the CMS.
-
-Find out more in the [Netlify CMS Docs](https://www.netlifycms.org/docs/#configuration).
-
-## See also
-
-[Netlify CMS Docs](https://www.netlifycms.org/docs/)  
-[Netlify CMS Repo](https://github.com/netlify/netlify-cms)  
-[Hyperstatic](https://github.com/Jinksi/hyperstatic) – the same starter project minus Netlify CMS  
-[Gatsby + Netlify CMS Starter](https://github.com/AustinGreen/gatsby-starter-netlify-cms)
+[Netlify CMS GitHub Repository](https://github.com/netlify/netlify-cms.git)

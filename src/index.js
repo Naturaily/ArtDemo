@@ -1,29 +1,19 @@
-import 'core-js/es6'
 import React from 'react'
-import { render } from 'react-snapshot'
-import 'modern-normalize/modern-normalize.css'
-import './globalStyles.css'
+import ReactDOM from 'react-dom'
+
+// Your top level component
 import App from './App'
-import registerServiceWorker, { unregister } from './registerServiceWorker'
-import data from './data.json'
 
-const rootEl = document.getElementById('root')
-render(<App />, rootEl)
+// Export your top level component as JSX (for static rendering)
+export default App
 
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default
-    render(<NextApp />, rootEl)
-  })
-}
+// Render your app
+if (typeof document !== 'undefined') {
+  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
+  const render = Comp => {
+    renderMethod(<Comp />, document.getElementById('root'))
+  }
 
-if (process.env.REACT_APP_SITE_URL && 'localStorage' in window) {
-  window.localStorage.setItem('netlifySiteURL', process.env.REACT_APP_SITE_URL)
-}
-
-const globalSettings =
-  data.settings && data.settings.filter(doc => doc.name === 'global')[0]
-
-if (globalSettings) {
-  globalSettings.enableServiceWorker ? registerServiceWorker() : unregister()
+  // Render!
+  render(App)
 }
