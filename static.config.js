@@ -41,6 +41,31 @@ function getPosts () {
   return getFiles()
 }
 
+function getLanding () {
+  const items = []
+  const getFiles = () => new Promise(resolve => {
+    if (fs.existsSync('./src/landing')) {
+      klaw('./src/landing')
+        .on('data', item => {
+          if (path.extname(item.path) === '.md') {
+            const data = fs.readFileSync(item.path, 'utf8')
+            const dataObj = matter(data)
+            delete dataObj.orig
+          }
+        })
+        .on('error', e => {
+          console.log(e)
+        })
+        .on('end', () => {
+          resolve(items)
+        })
+    } else {
+      resolve(items)
+    }
+  })
+  return getFiles()
+}
+
 export default {
 
   getSiteData: () => ({
@@ -48,10 +73,14 @@ export default {
   }),
   getRoutes: async () => {
     const posts = await getPosts()
+    const landing = await getLanding()
     return [
       {
         path: '/',
-        component: 'src/containers/Home',
+        component: 'src/containers/Landing',
+        getData: () => ({
+          landing,
+        }),
       },
       {
         path: '/about',

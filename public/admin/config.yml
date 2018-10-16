@@ -1,23 +1,55 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
 
 publish_mode: editorial_workflow
 
-media_folder: "public/uploads" # Media files will be stored in the repo under public/uploads
-public_folder: "/uploads" # Folder path where uploaded files will be accessed, relative to the base of the built site
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "src/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter.
-    # Remove any that aren't needed for posts
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+  -
+    name: "landing"
+    label: "Landing"
+    label_singular: "Landing"
+    folder: "_landing"
+    create: false
+    slug: ""
+    fields:
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Tytuł", name: "title", widget: "string"}
+      - {label: "Opis", name: "description", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
+      - label: "Newsy"
+        name: "news-list"
+        label_singular: "News"
+        widget: "list"
+        allow_add: true
+        fields:
+          - name: "news"
+            widget: "object"
+            fields:
+              - {label: "News tytuł", name: "title", widget: string}
+              - {label: "News tło", name: "background", widget: image}
+              - {label: "News link", name: "link", widget: string}
+      - label: "Reklama góra"
+        name: "advert-first"
+        widget: "object"
+        fields:
+          - {label: "Reklama obrazek", name: "advert-first-image", widget: image}
+          - {label: "Reklama link", name: "advert-first-link", widget: string}
+
+
+  -
+    name: "post"
+    label: "News"
+    folder: "_posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Meta Description(optimally 150 characters)", name: "description", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Obrazek", name: "image", widget: image}
