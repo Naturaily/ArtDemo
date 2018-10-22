@@ -1,3 +1,6 @@
+const React = require('react')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const axios = require('axios')
 const fs = require('fs')
 const klaw = require('klaw')
 const path = require('path')
@@ -44,24 +47,24 @@ function getPosts () {
 function getLanding () {
   const items = []
   const getFiles = () => new Promise(resolve => {
-    if (fs.existsSync('./src/landing')) {
-      klaw('./src/landing')
-        .on('data', item => {
-          if (path.extname(item.path) === '.md') {
-            const data = fs.readFileSync(item.path, 'utf8')
-            const dataObj = matter(data)
-            delete dataObj.orig
-          }
-        })
-        .on('error', e => {
-          console.log(e)
-        })
-        .on('end', () => {
-          resolve(items)
-        })
-    } else {
-      resolve(items)
-    }
+
+  klaw('./src/landing')
+    .on('data', item => {
+      if (path.extname(item.path) === '.md') {
+        const data = fs.readFileSync(item.path, 'utf8')
+        const dataObj = matter(data)
+
+        delete dataObj.orig
+
+        items.push(dataObj)
+      }
+    })
+    .on('error', e => {
+      console.log(e)
+    })
+    .on('end', () => {
+      resolve(items[0])
+    })
   })
   return getFiles()
 }
@@ -74,17 +77,16 @@ export default {
   getRoutes: async () => {
     const posts = await getPosts()
     const landing = await getLanding()
+    const { data: latestAuctions } = await axios.get('https://artinfo.naturaily.eu/api/v1/finished/auctions_catalogs')
+
     return [
       {
         path: '/',
         component: 'src/containers/Landing',
         getData: () => ({
           landing,
+          latestAuctions,
         }),
-      },
-      {
-        path: '/about',
-        component: 'src/containers/About',
       },
       {
         path: '/blog',
@@ -105,5 +107,66 @@ export default {
         component: 'src/containers/404',
       },
     ]
+  },
+  Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
+    <Html lang="en-US">
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="hehe descriptionezz" />
+      </Head>
+      <Body>{children}</Body>
+    </Html>
+  ),
+  webpack: (config, { defaultLoaders, stage }) => {
+    let loaders = []
+
+    if (stage === 'dev') {
+      loaders = [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }]
+    } else {
+      loaders = [
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            minimize: stage === 'prod',
+            sourceMap: false,
+          },
+        },
+        {
+          loader: 'sass-loader',
+          options: { includePaths: ['src/'] },
+        },
+      ]
+
+      // Don't extract css to file during node build process
+      if (stage !== 'node') {
+        loaders = ExtractTextPlugin.extract({
+          fallback: {
+            loader: 'style-loader',
+            options: {
+              sourceMap: false,
+              hmr: false,
+            },
+          },
+          use: loaders,
+        })
+      }
+    }
+
+    config.module.rules = [
+      {
+        oneOf: [
+          {
+            test: /\.s(a|c)ss$/,
+            use: loaders,
+          },
+          defaultLoaders.cssLoader,
+          defaultLoaders.jsLoader,
+          defaultLoaders.fileLoader,
+        ],
+      },
+    ]
+    return config
   },
 }

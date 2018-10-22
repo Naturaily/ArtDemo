@@ -3,17 +3,18 @@ slug: landing
 title: landing
 description: Opis landinga
 layout: landing
-news-list:
+news_list:
   - news:
-      background: /uploads/image3.jpg
+      background: /uploads/image.jpg
       link: 'https://wp.pl'
-      title: '12345'
+      title: 'Finally no bugs'
   - news:
-      background: /uploads/image3.jpg
+      background: /uploads/image2.jpg
       link: 'https://wp.pl'
-      title: 0987
-advert-first:
-  advert-first-image: /uploads/image3.jpg
-  advert-first-link: www.reklama.pl
+      title: 'Finally no bugs 2000'
+advert_first:
+  advert_first_image: /uploads/image3.jpg
+  advert_first_link: www.reklama.pl
 ---
+
  contentsdhjfbofasdlbdbiodbldisa

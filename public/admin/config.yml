@@ -21,7 +21,7 @@ collections:
       - {label: "Opis", name: "description", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "landing"}
       - label: "Newsy"
-        name: "news-list"
+        name: "news_list"
         label_singular: "News"
         widget: "list"
         allow_add: true
@@ -33,11 +33,11 @@ collections:
               - {label: "News tło", name: "background", widget: image}
               - {label: "News link", name: "link", widget: string}
       - label: "Reklama góra"
-        name: "advert-first"
+        name: "advert_first"
         widget: "object"
         fields:
-          - {label: "Reklama obrazek", name: "advert-first-image", widget: image}
-          - {label: "Reklama link", name: "advert-first-link", widget: string}
+          - {label: "Reklama obrazek", name: "advert_first_image", widget: image}
+          - {label: "Reklama link", name: "advert_first_link", widget: string}
 
 
   -
