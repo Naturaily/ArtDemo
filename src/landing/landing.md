@@ -7,14 +7,13 @@ news_list:
   - news:
       background: /uploads/image.jpg
       link: 'https://wp.pl'
-      title: 'Finally no bugs'
+      title: Finally no bugs
   - news:
       background: /uploads/image2.jpg
       link: 'https://wp.pl'
-      title: 'Finally no bugs 2000'
+      title: Finally no bugs 2000
 advert_first:
   advert_first_image: /uploads/image3.jpg
-  advert_first_link: www.reklama.pl
+  advert_first_link: wp.pl
 ---
 
- contentsdhjfbofasdlbdbiodbldisa
