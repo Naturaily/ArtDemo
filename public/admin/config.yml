@@ -11,7 +11,7 @@ collections:
   -
     name: "landing"
     label: "Landing"
-    folder: "_landing"
+    folder: "src/landing"
     create: false
     slug: "{{slug}}"
     fields:
@@ -42,7 +42,7 @@ collections:
   -
     name: "post"
     label: "News"
-    folder: "_posts"
+    folder: "src/posts"
     create: true
     slug: "{{slug}}"
     fields:
