@@ -7,7 +7,7 @@ news_list:
   - news:
       background: /uploads/image.jpg
       link: 'https://wp.pl'
-      title: Finally no bugs
+      title: No bugs here
   - news:
       background: /uploads/image2.jpg
       link: 'https://wp.pl'
