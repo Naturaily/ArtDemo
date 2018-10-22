@@ -11,10 +11,9 @@ collections:
   -
     name: "landing"
     label: "Landing"
-    label_singular: "Landing"
     folder: "_landing"
     create: false
-    slug: ""
+    slug: "{{slug}}"
     fields:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Tytuł", name: "title", widget: "string"}
