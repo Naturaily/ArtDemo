@@ -25,14 +25,14 @@ export default withRouteData(({ landing, latestAuctions, posts }) => (
           ))}
         </Carousel>
         <div className="latest_auctions flex-column">
-          <p className="latest_auctions-heading">Najbliższe aukcje <a href="#">Więcej</a></p>
+          <p className="latest_auctions-heading">Najbliższe aukcje <a href="https://artinfo.naturaily.eu/" target="_blank">Więcej</a></p>
           <div className="latest_auctions-wrapper flex-column">
             {latestAuctions.data.slice(0, 4).map(auction => (
               <div key={auction.id} className="latest_auctions-auction">
                 <div className="latest_auctions-image">
                   <img src={auction.attributes.image_preview_url} />
                 </div>
-                <div className="latest_auctions-content">
+                <div className="latest_auctions-content flex-column justify-between">
                   <span className="flex-row justify-between">
                     <small className="left text-left">{auction.id}</small>
                     <small>|</small>
@@ -65,20 +65,46 @@ export default withRouteData(({ landing, latestAuctions, posts }) => (
       </div>
     </div>
 
-    <div className="container container--search flex-column">
-      <h3 className="">Polecane</h3>
-      <div className="flex-row">
+    <div className="container flex-column">
+      <h3 className="auctions_promoted-title">Polecane</h3>
+      <div className="auctions_promoted-auctions flex-row">
         {latestAuctions.data.slice(0, 6).map(auction => (
-          <div key={auction.id} className="">
-            <div className="">
+          <div key={auction.id} className="auctions_promoted-auction flex-column">
+            <div className="auctions_promoted-image">
               <img src={auction.attributes.image_preview_url} />
             </div>
-            <div className="">
-              <h3>{auction.id}</h3>
-              <span>{auction.attributes.name}</span>
+            <div className="auctions_promoted-content flex-column">
+              <p>
+                <small className="auctions_promoted-date"><span>{auction.id}</span>|<span>12:12</span></small>
+                <small className="auctions_promoted-city">Warszawa</small>
+              </p>
+              <h4>{auction.attributes.name}</h4>
+              <small className="auctions_promoted-type">13 Aukcja Sztuka Dawnej</small>
+              <button className="button">Zobacz Katalog</button>
             </div>
           </div>
         ))}
+      </div>
+    </div>
+
+
+    <div className="container flex-column">
+      <h3 className="auctions_category-title ">Aukcje sztuki dawnej i współczesnej</h3>
+      <div className="auctions_category-auctions flex-row">
+        {latestAuctions.data.slice(0, 5).map(auction => (
+          <div key={auction.id} className="auctions_category-auction flex-column">
+            <div className="auctions_category-image ">
+              <img src={auction.attributes.image_preview_url} />
+            </div>
+            <div className="auctions_category-content flex-column justify-between">
+              <small className="auctions_category-date flex-row justify-between"><span>{auction.id}</span>|<span>12:12</span></small>
+              <h4>{auction.attributes.name}</h4>
+              <small>13 Aukcja Sztuka Dawnej</small>
+              <small className="auctions_category-city ">Warszawa</small>
+            </div>
+          </div>
+        ))}
+        <div className="auctions_category-auction auctions_category-auction--more">KEK</div>
       </div>
     </div>
 

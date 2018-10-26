@@ -99,7 +99,7 @@
   }
 
   &-content {
-    padding: 10px 0px 10px 20px;
+    padding: 3px 0px 5px 20px;
     flex: 1 1 auto;
   }
 
@@ -124,6 +124,10 @@
 
   .left, .right {
     width: 50%;
+  }
+
+  .right {
+    color: $link-color;
   }
 
   small {
@@ -175,5 +179,130 @@
     position: absolute;
     right: 22px;
     top: 18px;
+  }
+}
+
+.auctions_promoted {
+  &-title {
+    padding-top: 70px;
+  }
+
+  &-auctions {
+    flex-wrap: wrap;
+    margin: 20px -25px;
+  }
+
+  &-auction {
+    width: 33.3%;
+    padding: 20px 26px;
+  }
+
+  &-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+
+    img {
+      position: absolute;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      display: block;
+      max-width: 500px;
+      max-height: 500px;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  &-content {
+    min-height: 140px;
+    padding-top: 10px;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+
+      small {
+        font-size: 12px;
+      }
+    }
+
+    h4 {
+      padding: 10px 0;
+    }
+  }
+
+  &-date {
+    min-width: 120px;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  &-type {
+    flex: 1 1 auto;
+  }
+}
+
+.auctions_category {
+
+  &-title {
+    padding-top: 80px;
+  }
+
+  &-auctions {
+    margin-top: 20px;
+    margin-bottom: 130px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  &-auction {
+    width: 20%;
+    padding: 0 15px;
+
+    &--more {
+      width: 127px;
+    }
+  }
+
+  &-date {
+    width: 120px;
+  }
+
+  &-image {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+
+    img {
+      position: absolute;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      display: block;
+      max-width: 200px;
+      max-height: 260px;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  &-content {
+    height: 70px;
   }
 }
