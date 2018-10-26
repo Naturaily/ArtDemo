@@ -126,10 +126,6 @@
     width: 50%;
   }
 
-  .right {
-    color: $link-color;
-  }
-
   small {
     font-size: 12px;
   }
@@ -258,7 +254,7 @@
   }
 
   &-auctions {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 130px;
     margin-left: -15px;
     margin-right: -15px;
@@ -267,14 +263,23 @@
   &-auction {
     width: 20%;
     padding: 0 15px;
+  }
+  &-more {
+    padding: 0 15px;
 
-    &--more {
-      width: 127px;
+    span {
+      display: flex;
+    	height: 150px;
+    	width: 127px;
+    	border: 2px solid #F3F3F3;
+    	border-radius: 3.2px;
+    	background-color: #FBFCFD;
+    	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
     }
   }
 
   &-date {
-    width: 120px;
+    width: 100px;
   }
 
   &-image {

@@ -36,7 +36,7 @@ export default withRouteData(({ landing, latestAuctions, posts }) => (
                   <span className="flex-row justify-between">
                     <small className="left text-left">{auction.id}</small>
                     <small>|</small>
-                    <small className="right text-right">aukcja trwa</small>
+                    <small className="right text-right text-orange">aukcja trwa</small>
                   </span>
                   <h3 className="latest_auctions-house">{auction.attributes.name}</h3>
                   <p className="latest_auctions-category">13 Aukcja Sztuka Dawnej</p>
@@ -104,7 +104,11 @@ export default withRouteData(({ landing, latestAuctions, posts }) => (
             </div>
           </div>
         ))}
-        <div className="auctions_category-auction auctions_category-auction--more">KEK</div>
+        <div className="auctions_category-more">
+          <span className="auctions_category-auction--more">
+
+          </span>
+        </div>
       </div>
     </div>
 
