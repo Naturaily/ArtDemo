@@ -86,16 +86,17 @@ export default {
         getData: () => ({
           landing,
           latestAuctions,
+          posts,
         }),
       },
       {
-        path: '/blog',
+        path: '/aktualnosci',
         component: 'src/containers/Blog',
         getData: () => ({
           posts,
         }),
         children: posts.map(post => ({
-          path: `/post/${post.data.slug}`,
+          path: `/aktualnosci/${post.data.slug}`,
           component: 'src/containers/Post',
           getData: () => ({
             post,

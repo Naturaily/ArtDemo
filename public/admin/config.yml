@@ -47,8 +47,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Meta Description(optimally 150 characters)", name: "description", widget: "string"}
+      - {label: "Meta Description(optimally 150 characters)", name: "meta_description", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Data publikacji", name: "publication_date", widget: date}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Obrazek", name: "image", widget: image}
+      - {label: "Opis", name: "description", widget: "string"}

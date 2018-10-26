@@ -1,10 +1,10 @@
 ---
-title: Pierwszy post
+title: Drugi post
 meta_description: 'Nowosci na artinfo, hehe!'
-slug: post-nr-1
+slug: post-nr-2
 layout: post
-publication_date: 
-image: /uploads/image3.jpg
+publication_date:
+image: /uploads/image2.jpg
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi nullam vehicula ipsum a arcu. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Venenatis cras sed felis eget velit aliquet. Porttitor lacus luctus accumsan tortor. Est sit amet facilisis magna etiam tempor orci. Porttitor leo a diam sollicitudin tempor id eu. Consectetur adipiscing elit pellentesque habitant morbi tristique. Non odio euismod lacinia at quis. Et malesuada fames ac turpis egestas maecenas pharetra. Amet risus nullam eget felis eget nunc lobortis mattis. Id eu nisl nunc mi ipsum faucibus vitae. Risus pretium quam vulputate dignissim suspendisse in est. Pellentesque habitant morbi tristique senectus et netus et. Nisl purus in mollis nunc sed id semper risus. Neque gravida in fermentum et sollicitudin ac.

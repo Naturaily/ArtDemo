@@ -1,6 +1,8 @@
 .header {
   box-shadow: 0 4px 4px -2px rgba(92,94,102,0.15);
   padding: 28px 0;
+  position: relative;
+  z-index: 2;
 
   &-nav {
     justify-content: space-between;
@@ -25,6 +27,8 @@
 .news_carousel {
   display: flex;
   width: 69%;
+  box-shadow: 0 4px 4px -2px rgba(92,94,102,0.15);
+  z-index: 1;
 
   &-element {
     height: 500px;
@@ -42,10 +46,6 @@
     left: 60px;
     padding: 10px 60px 15px 20px;
 
-    small {
-      font-size: 14px;
-      color: #8A8D99;
-    }
     h2 {
       font-size: 32px;
       color: #FBFCFD;
@@ -67,6 +67,8 @@
   justify-content: space-evenly;
   padding-left: 30px;
   background-color: #F7F7F7;
+  box-shadow: 0 4px 4px -2px rgba(92,94,102,0.15);
+  z-index: 1;
 
   &-auction {
     display: flex;
@@ -98,6 +100,7 @@
 
   &-content {
     padding: 10px 0px 10px 20px;
+    flex: 1 1 auto;
   }
 
   &-auction {
@@ -108,6 +111,23 @@
     padding: 10px 77px 10px 10px;
     display: flex;
     justify-content: space-between;
+  }
+
+  &-house {
+    font-size: 16px;
+  }
+
+  &-category {
+    font-size: 14px;
+    color: #90939E;
+  }
+
+  .left, .right {
+    width: 50%;
+  }
+
+  small {
+    font-size: 12px;
   }
 }
 

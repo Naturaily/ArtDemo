@@ -17,8 +17,7 @@ const App = () => (
                 <img src={siteLogo} />
               </Link>
             <div className="header-links">
-              <Link to="/blog" className="header-link">Blog</Link>
-              <Link to="/" className="header-link">Aktualności</Link>
+              <Link to="/aktualnosci" className="header-link">Aktualności</Link>
             </div>
           </nav>
         </div>
