@@ -1,14 +1,15 @@
 ---
-title: Pierwszy post
+title: Spotkanie z autorem dzieł X
 meta_description: 'Nowosci na artinfo, hehe!'
-slug: post-nr-1
+slug: post-wydarzenia-pierwszy
 layout: post
-category: wydarzenia
-publication_date:
-from:
-to:
+publication_date: '2018-11-05'
+from: 06 Nov 2018
+to: 14 Nov 2018
 image: /uploads/image3.jpg
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+description: >-
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua.
 ---
 Events 1
 
