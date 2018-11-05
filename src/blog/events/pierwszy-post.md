@@ -1,5 +1,5 @@
 ---
-title: Spotkanie z autorem dzieł X
+title: Spotkanie z autorem dziel X
 meta_description: 'Nowosci na artinfo, hehe!'
 slug: post-wydarzenia-pierwszy
 layout: post
