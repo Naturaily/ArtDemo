@@ -9,7 +9,7 @@ export default withRouteData(({ posts }) => (
     <Search/>
     <BlogNavigation/>
     {posts.slice(0, 1).map((post, index) => (
-      <div key={post.data.id} className="blog_posts-first_post">
+      <div key={index} className="blog_posts-first_post">
         <Link to={`/aktualnosci/${post.data.slug}`} className="blog_posts-image">
           <img
             className="image"
@@ -30,7 +30,7 @@ export default withRouteData(({ posts }) => (
       <h4 className="blog_posts-promoted_title">POLECANE</h4>
       <ul className="blog_posts-promoted flex-row">
         {posts.slice(1, 4).map((post, index) => (
-          <li key={post.data.id} className="blog_posts-promoted_post">
+          <li key={index} className="blog_posts-promoted_post">
             <Link to={`/aktualnosci/${post.data.slug}`} className="blog_posts-image">
               <img
                 className="image"

@@ -48,7 +48,7 @@ export default withRouteData(({ landing, posts }) => (
     <OldAuctions/>
 
     {posts.slice(0, 1).map((singleEvent, index) => (
-      <div key={singleEvent.data.slug} className={`blog_posts-post ${index === 0 ? 'blog_posts-first_post' : ''}`}>
+      <div key={index} className={`blog_posts-post ${index === 0 ? 'blog_posts-first_post' : ''}`}>
         <Link to={`/aktualnosci/${singleEvent.data.slug}`} className="blog_posts-image">
           <img
             className="image"

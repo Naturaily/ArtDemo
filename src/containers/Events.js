@@ -13,7 +13,7 @@ export default withRouteData(({ events }) => (
     <BlogNavigation/>
     <ul className="blog_posts-promoted flex-row">
       {events.map((singleEvent, index) => (
-        <li key={singleEvent.data.id} className="blog_posts-promoted_post">
+        <li key={index} className="blog_posts-promoted_post">
           <Link to={`/wydarzenia/${singleEvent.data.slug}`} className="blog_posts-image">
             <img
               className="image"
