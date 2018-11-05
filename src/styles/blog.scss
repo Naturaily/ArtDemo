@@ -1,55 +1,88 @@
 .blog_posts {
 
-  &-post {
+  &-first_post {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-bottom: 255px;
 
-    &--first {
+    .blog_posts-image {
       display: flex;
-      justify-content: center;
-      width: 100%;
-      height: 500px;
       position: relative;
-      margin-bottom: 100px;
+      width: 100%;
+      overflow: hidden;
+    }
 
-      .blog_posts-image {
-        display: flex;
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-      }
+    img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: -50%;
+      z-index: -1;
+    }
 
-      img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: -50%;
-        z-index: -1;
-      }
+    .blog_posts-box {
+      background: #fff;
+      width: 50%;
+      height: 280px;
+      position: absolute;
+      bottom: -30%;
+      z-index: 1;
+      box-shadow: 0 3px 4px 0 rgba(0,0,0,0.12);
+      padding: 20px 75px;
+    }
 
-      .blog_posts-box {
-        background: #fff;
-        width: 50%;
-        height: 280px;
-        position: absolute;
-        bottom: -30%;
-        z-index: 1;
-        box-shadow: 0 3px 4px 0 rgba(0,0,0,0.12);
-        padding: 20px 75px;
-      }
+    .blog_posts-more {
+      margin-top: auto;
+      margin-bottom: 30px;
+      color: #363A42;
+    }
 
-      .blog_posts-more {
-        margin-top: auto;
-        margin-bottom: 30px;
-        color: #363A42;
-      }
+    p {
+      text-align: left;
+    }
 
-      p {
-        text-align: left;
-      }
-
-      h2 {
-        font-size: 24px;
-        padding: 20px 0 30px;
-      }
+    h2 {
+      font-size: 24px;
+      padding: 20px 0 30px;
     }
   }
+
+  &-promoted {
+
+    &_title {
+      color: $link-color;
+    }
+
+    &_post {
+      display: flex;
+      width: 33.3%;
+      padding: 0 10px;
+      flex-direction: column;
+    }
+
+    .blog_posts-image {
+      display: flex;
+      width: 100%;
+      height: 175px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: -50%;
+      z-index: -1;
+      min-width: 500px;
+    }
+
+    .blog_posts-box {
+      text-align: left;
+    }
+  }
+
 }

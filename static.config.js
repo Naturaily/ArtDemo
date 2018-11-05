@@ -6,13 +6,14 @@ const klaw = require('klaw')
 const path = require('path')
 const matter = require('gray-matter')
 
+
 function getPosts () {
   const items = []
-  // Walk ("klaw") through posts directory and push file paths into items array //
+  // Walk ("klaw") through blog directory and push file paths into items array //
   const getFiles = () => new Promise(resolve => {
-    // Check if posts directory exists //
-    if (fs.existsSync('./src/posts')) {
-      klaw('./src/posts')
+    // Check if blog directory exists //
+    if (fs.existsSync('./src/blog')) {
+      klaw('./src/blog')
         .on('data', item => {
           // Filter function to retrieve .md files //
           if (path.extname(item.path) === '.md') {
@@ -33,11 +34,163 @@ function getPosts () {
         })
         .on('end', () => {
           // Resolve promise for async getRoutes request //
-          // posts = items for below routes //
+          // events = items for below routes //
           resolve(items)
         })
     } else {
-      // If src/posts directory doesn't exist, return items as empty array //
+      // If src/events directory doesn't exist, return items as empty array //
+      resolve(items)
+    }
+  })
+  return getFiles()
+}
+
+function getEvents () {
+  const items = []
+  // Walk ("klaw") through events directory and push file paths into items array //
+  const getFiles = () => new Promise(resolve => {
+    // Check if events directory exists //
+    if (fs.existsSync('./src/blog/events')) {
+      klaw('./src/blog/events')
+        .on('data', item => {
+          // Filter function to retrieve .md files //
+          if (path.extname(item.path) === '.md') {
+            // If markdown file, read contents //
+            const data = fs.readFileSync(item.path, 'utf8')
+            // Convert to frontmatter object and markdown content //
+            const dataObj = matter(data)
+            // Create slug for URL //
+            dataObj.data.slug = dataObj.data.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
+            // Remove unused key //
+            delete dataObj.orig
+            // Push object into items array //
+            items.push(dataObj)
+          }
+        })
+        .on('error', e => {
+          console.log(e)
+        })
+        .on('end', () => {
+          // Resolve promise for async getRoutes request //
+          // events = items for below routes //
+          resolve(items)
+        })
+    } else {
+      // If src/events directory doesn't exist, return items as empty array //
+      resolve(items)
+    }
+  })
+  return getFiles()
+}
+
+function getFairs () {
+  const items = []
+  // Walk ("klaw") through fairs directory and push file paths into items array //
+  const getFiles = () => new Promise(resolve => {
+    // Check if fairs directory exists //
+    if (fs.existsSync('./src/blog/fairs')) {
+      klaw('./src/blog/fairs')
+        .on('data', item => {
+          // Filter function to retrieve .md files //
+          if (path.extname(item.path) === '.md') {
+            // If markdown file, read contents //
+            const data = fs.readFileSync(item.path, 'utf8')
+            // Convert to frontmatter object and markdown content //
+            const dataObj = matter(data)
+            // Create slug for URL //
+            dataObj.data.slug = dataObj.data.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
+            // Remove unused key //
+            delete dataObj.orig
+            // Push object into items array //
+            items.push(dataObj)
+          }
+        })
+        .on('error', e => {
+          console.log(e)
+        })
+        .on('end', () => {
+          // Resolve promise for async getRoutes request //
+          // fairs = items for below routes //
+          resolve(items)
+        })
+    } else {
+      // If src/fairs directory doesn't exist, return items as empty array //
+      resolve(items)
+    }
+  })
+  return getFiles()
+}
+
+function getInformations () {
+  const items = []
+  // Walk ("klaw") through informations directory and push file paths into items array //
+  const getFiles = () => new Promise(resolve => {
+    // Check if informations directory exists //
+    if (fs.existsSync('./src/blog/informations')) {
+      klaw('./src/blog/informations')
+        .on('data', item => {
+          // Filter function to retrieve .md files //
+          if (path.extname(item.path) === '.md') {
+            // If markdown file, read contents //
+            const data = fs.readFileSync(item.path, 'utf8')
+            // Convert to frontmatter object and markdown content //
+            const dataObj = matter(data)
+            // Create slug for URL //
+            dataObj.data.slug = dataObj.data.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
+            // Remove unused key //
+            delete dataObj.orig
+            // Push object into items array //
+            items.push(dataObj)
+          }
+        })
+        .on('error', e => {
+          console.log(e)
+        })
+        .on('end', () => {
+          // Resolve promise for async getRoutes request //
+          // informations = items for below routes //
+          resolve(items)
+        })
+    } else {
+      // If src/informations directory doesn't exist, return items as empty array //
+      resolve(items)
+    }
+  })
+  return getFiles()
+}
+
+function getReports () {
+  const items = []
+  // Walk ("klaw") through reports directory and push file paths into items array //
+  const getFiles = () => new Promise(resolve => {
+    // Check if reports directory exists //
+    if (fs.existsSync('./src/blog/reports')) {
+      klaw('./src/blog/reports')
+        .on('data', item => {
+          // Filter function to retrieve .md files //
+          if (path.extname(item.path) === '.md') {
+            // If markdown file, read contents //
+            const data = fs.readFileSync(item.path, 'utf8')
+            // Convert to frontmatter object and markdown content //
+            const dataObj = matter(data)
+            // Create slug for URL //
+            dataObj.data.slug = dataObj.data.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
+            // Remove unused key //
+            delete dataObj.orig
+            // Push object into items array //
+            items.push(dataObj)
+          }
+        })
+        .on('error', e => {
+          console.log(e)
+        })
+        .on('end', () => {
+          // Resolve promise for async getRoutes request //
+          // reports = items for below routes //
+          resolve(items)
+        })
+    } else {
+      // If src/reports directory doesn't exist, return items as empty array //
       resolve(items)
     }
   })
@@ -76,8 +229,11 @@ export default {
   }),
   getRoutes: async () => {
     const posts = await getPosts()
+    const events = await getEvents()
+    const fairs = await getFairs()
+    const informations = await getInformations()
+    const reports = await getReports()
     const landing = await getLanding()
-    const { data: latestAuctions } = await axios.get('https://artinfo.naturaily.eu/api/v1/finished/auctions_catalogs')
 
     return [
       {
@@ -85,7 +241,6 @@ export default {
         component: 'src/containers/Landing',
         getData: () => ({
           landing,
-          latestAuctions,
           posts,
         }),
       },
@@ -95,14 +250,23 @@ export default {
         getData: () => ({
           posts,
         }),
-        children: posts.map(post => ({
-          path: `/aktualnosci/${post.data.slug}`,
-          component: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
       },
+      {
+        path: `/wydarzenia`,
+        component: 'src/containers/Events',
+        getData: () => ({
+          events,
+        }),
+        children:
+          events.map(singleEvent => ({
+            path: `/${singleEvent.data.slug}`,
+            component: 'src/containers/SingleEvent',
+            getData: () => ({
+              singleEvent,
+            }),
+          })),
+      },
+
       {
         is404: true,
         component: 'src/containers/404',

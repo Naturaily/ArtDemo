@@ -40,9 +40,67 @@ collections:
 
 
   -
-    name: "post"
-    label: "News"
-    folder: "src/posts"
+    name: "events"
+    label: "Wydarzenia"
+    folder: "src/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Description(optimally 150 characters)", name: "meta_description", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Data publikacji", name: "publication_date", widget: date}
+      - label: "Od"
+        name: "from"
+        widget: "date"
+        default: ""
+        format: "DD MMM YYYY"
+      - label: "Do"
+        name: "to"
+        widget: "date"
+        default: ""
+        format: "DD MMM YYYY"
+
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Obrazek", name: "image", widget: image}
+      - {label: "Opis", name: "description", widget: "string"}
+  -
+    name: "reports"
+    label: "Relacje"
+    folder: "src/reports"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Description(optimally 150 characters)", name: "meta_description", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Data publikacji", name: "publication_date", widget: date}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Obrazek", name: "image", widget: image}
+      - {label: "Opis", name: "description", widget: "string"}
+
+  -
+    name: "informations"
+    label: "Artinformacje"
+    folder: "src/informations"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta Description(optimally 150 characters)", name: "meta_description", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Data publikacji", name: "publication_date", widget: date}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Obrazek", name: "image", widget: image}
+      - {label: "Opis", name: "description", widget: "string"}
+
+  -
+    name: "fairs"
+    label: "Targi"
+    folder: "src/fairs"
     create: true
     slug: "{{slug}}"
     fields:

@@ -1,5 +1,5 @@
 {
-  "name": "react-static-example-basic",
+  "name": "artinfo-landing",
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "fsevents": "^1.2.4",
     "gray-matter": "^3.1.1",
     "klaw": "^2.1.1",
     "moment": "^2.20.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-flex-carousel": "^1.1.0",
     "react-hot-loader": "^4.0.0-beta.21",
     "react-markdown": "^3.1.0",
     "react-moment": "^0.7.0",
@@ -24,9 +24,10 @@
     "react-static": "^5.1.10"
   },
   "devDependencies": {
-    "eslint-config-react-tools": "1.x.x",
+    "eslint-config-react-tools": "^1.1.6",
     "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.7.2",
+    "react-flex-carousel": "^1.1.0",
     "sass-loader": "^6.0.6",
     "serve": "^6.1.0"
   }
