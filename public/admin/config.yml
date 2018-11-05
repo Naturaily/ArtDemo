@@ -42,7 +42,7 @@ collections:
   -
     name: "events"
     label: "Wydarzenia"
-    folder: "src/events"
+    folder: "src/blog/events"
     create: true
     slug: "{{slug}}"
     fields:
@@ -68,7 +68,7 @@ collections:
   -
     name: "reports"
     label: "Relacje"
-    folder: "src/reports"
+    folder: "src/blog/reports"
     create: true
     slug: "{{slug}}"
     fields:
@@ -84,7 +84,7 @@ collections:
   -
     name: "informations"
     label: "Artinformacje"
-    folder: "src/informations"
+    folder: "src/blog/informations"
     create: true
     slug: "{{slug}}"
     fields:
@@ -100,7 +100,7 @@ collections:
   -
     name: "fairs"
     label: "Targi"
-    folder: "src/fairs"
+    folder: "src/blog/fairs"
     create: true
     slug: "{{slug}}"
     fields:
