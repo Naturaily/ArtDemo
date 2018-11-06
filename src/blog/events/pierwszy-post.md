@@ -4,16 +4,19 @@ meta_description: 'Nowosci na artinfo, hehe!'
 slug: post-wydarzenia-pierwszy
 layout: post
 publication_date: '2018-11-05'
+category: wydarzenia
 from: 06 Nov 2018
 to: 14 Nov 2018
 image: /uploads/image3.jpg
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua.
+  incididunt ut labore et dolore magna aliqua, incididunt ut labore et dolore magna aliqua.
 ---
 Events 1
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi nullam vehicula ipsum a arcu. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Venenatis cras sed felis eget velit aliquet. Porttitor lacus luctus accumsan tortor. Est sit amet facilisis magna etiam tempor orci. Porttitor leo a diam sollicitudin tempor id eu. Consectetur adipiscing elit pellentesque habitant morbi tristique. Non odio euismod lacinia at quis. Et malesuada fames ac turpis egestas maecenas pharetra. Amet risus nullam eget felis eget nunc lobortis mattis. Id eu nisl nunc mi ipsum faucibus vitae. Risus pretium quam vulputate dignissim suspendisse in est. Pellentesque habitant morbi tristique senectus et netus et. Nisl purus in mollis nunc sed id semper risus. Neque gravida in fermentum et sollicitudin ac.
+## Lorem ipsum dolor sit amet
+
+Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi nullam vehicula ipsum a arcu. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Venenatis cras sed felis eget velit aliquet. Porttitor lacus luctus accumsan tortor. Est sit amet facilisis magna etiam tempor orci. Porttitor leo a diam sollicitudin tempor id eu. Consectetur adipiscing elit pellentesque habitant morbi tristique. Non odio euismod lacinia at quis. Et malesuada fames ac turpis egestas maecenas pharetra. Amet risus nullam eget felis eget nunc lobortis mattis. Id eu nisl nunc mi ipsum faucibus vitae. Risus pretium quam vulputate dignissim suspendisse in est. Pellentesque habitant morbi tristique senectus et netus et. Nisl purus in mollis nunc sed id semper risus. Neque gravida in fermentum et sollicitudin ac.
 
 
 

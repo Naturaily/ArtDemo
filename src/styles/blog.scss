@@ -1,4 +1,5 @@
 .blog_posts {
+  margin-top: 3rem;
 
   &-first_post {
     display: flex;
@@ -20,7 +21,7 @@
       height: auto;
       position: absolute;
       top: -50%;
-      z-index: -1;
+      z-index: 0;
     }
 
     .blog_posts-box {
@@ -53,13 +54,13 @@
   &-promoted {
 
     &_title {
-      color: $link-color;
+      color: $color-orange;
     }
 
     &_post {
       display: flex;
       width: 33.3%;
-      padding: 0 10px;
+      padding: 0 15px;
       flex-direction: column;
     }
 
@@ -76,7 +77,7 @@
       height: auto;
       position: absolute;
       top: -50%;
-      z-index: -1;
+      z-index: 0;
       min-width: 500px;
     }
 
@@ -85,4 +86,80 @@
     }
   }
 
+  &-latest_posts {
+    padding-right: 30px;
+    flex: 1;
+    border-right: 1px solid $color-grey-light;
+  }
+
+  &-latest_post {
+    padding-bottom: 65px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &-aside {
+    width: 355px;
+    padding-left: 30px;
+    border-left: 1px solid $color-grey-light;
+  }
+}
+
+.latest_post {
+  padding-bottom: 65px;
+  &-image {
+    width: 350px;
+    height: 210px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &-details {
+    flex: 1;
+    padding-left: 25px;
+  }
+
+  &-due {
+    color: $color-manatee;
+    font-size: $font-size-small;
+    height: $font-size-small;
+    margin-bottom: 15px;
+  }
+
+  &-header {
+    margin-bottom: 15px;
+  }
+
+  &-location {
+    margin-bottom: 15px;
+  }
+
+  &-description {
+    padding-bottom: 15px;
+    font-size: $font-size-normal -1;
+    color: $color-manatee;
+  }
+
+  &-extra {
+
+  }
+
+  &-footer {
+    justify-content: center;
+    margin-top: auto;
+
+    a {
+      font-size: $font-size-normal - 1;
+      color: $color-trout;
+    }
+  }
 }

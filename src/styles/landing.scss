@@ -6,7 +6,6 @@
 
   &-nav {
     justify-content: space-between;
-    padding: 0 28px;
   }
 
   &-logo img {
@@ -19,7 +18,7 @@
 
   &-link {
     margin-left: 30px;
-    color: #8a8d99;
+    color: $color-manatee;
     font-size: 15px;
   }
 }
@@ -119,7 +118,7 @@
 
   &-category {
     font-size: 14px;
-    color: #90939E;
+    color: $color-manatee;
   }
 
   .left, .right {
@@ -141,7 +140,7 @@
 }
 
 .search_box {
-  width: 70%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -150,8 +149,8 @@
   &-title {
     font-size: 28px;
     text-align: center;
-    padding-bottom: 40px;
-    padding-top: 20px;
+    padding-top: 60px;
+    margin-bottom: -30px;
   }
 
   &-input {
@@ -167,8 +166,8 @@
   button {
   	height: 40px;
   	width: 40px;
-  	background-color: #FF5D00;
-  	box-shadow: 0 4px 16px 0 #FF5D00;
+  	background-color: $color-orange;
+  	box-shadow: 0 4px 16px 0 $color-orange;
     color: #fff;
     border-radius: 50%;
     border: 0;
@@ -186,11 +185,12 @@
   &-auctions {
     flex-wrap: wrap;
     margin: 20px -25px;
+    margin-top: 0;
   }
 
   &-auction {
     width: 33.3%;
-    padding: 20px 26px;
+    padding: 0 26px 40px;
   }
 
   &-image {
@@ -219,7 +219,7 @@
   }
 
   &-content {
-    min-height: 140px;
+    min-height: 145px;
     padding-top: 10px;
 
     p {
@@ -232,7 +232,7 @@
     }
 
     h4 {
-      padding: 10px 0;
+      padding: 5px 0;
     }
   }
 
@@ -254,7 +254,6 @@
   }
 
   &-auctions {
-    margin-top: 40px;
     margin-bottom: 130px;
     margin-left: -15px;
     margin-right: -15px;

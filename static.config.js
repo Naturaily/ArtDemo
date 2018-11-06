@@ -232,6 +232,7 @@ export default {
         getData: () => ({
           landing,
           posts,
+          events,
         }),
       },
       {

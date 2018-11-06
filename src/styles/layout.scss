@@ -1,3 +1,26 @@
+.container {
+  margin: auto;
+  max-width: 85.3333333333rem;
+  width: 100%;
+  padding-right: 60px;
+  padding-left: 60px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &--no-padding {
+    padding: 0;
+  }
+
+  &--adw {
+    background-color: #F3F3F3;
+  }
+
+  &--search {
+    justify-content: center;
+    min-height: 200px;
+  }
+}
+
 .blog-post {
  display: flex;
  flex-direction: column;

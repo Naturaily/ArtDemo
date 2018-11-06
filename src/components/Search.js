@@ -4,12 +4,6 @@ import { Router, Link } from 'react-static'
 import Routes from 'react-static-routes'
 
 class Search extends React.Component {
-  state = {
-    latestAuctions: []
-  }
-
-  componentDidMount() {
-  }
 
   render() {
     return (

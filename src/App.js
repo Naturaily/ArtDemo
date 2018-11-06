@@ -9,19 +9,19 @@ import './app.scss'
 
 const App = () => (
   <Router>
-    <div>
-      <div className="header">
+    <div id="root">
+      <header className="header">
         <div className="container">
           <nav className="header-nav flex-row">
-              <Link to="/" className="header-logo">
-                <img src={siteLogo} />
-              </Link>
+            <Link to="/" className="header-logo">
+              <img src={siteLogo} />
+            </Link>
             <div className="header-links">
               <Link to="/aktualnosci" className="header-link">Aktualności</Link>
             </div>
           </nav>
         </div>
-      </div>
+      </header>
       <Routes />
     </div>
   </Router>

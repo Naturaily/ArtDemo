@@ -19,7 +19,7 @@ class PromotedAuctions extends React.Component {
     return (
 
       <div className="container flex-column">
-        <h3 className="auctions_promoted-title">Polecane</h3>
+        <h3 className="section_header">Polecane</h3>
         <div className="auctions_promoted-auctions flex-row">
           {this.state.latestAuctions.map(auction => (
             <div key={auction.id} className="auctions_promoted-auction flex-column">

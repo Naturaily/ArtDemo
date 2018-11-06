@@ -1,20 +1,26 @@
 small {
   font-size: 14px;
-  color: #8A8D99;
+  color: $color-manatee;
 }
 
 a {
   text-decoration: none;
-  color: $link-color;
+  color: $color-orange;
   font-size: 14px;
 }
 
 .text-orange {
-  color: $link-color;
+  color: $color-orange;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 1;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: $font-size-x-large;
+  line-height: 1;
 }
 
 .text {

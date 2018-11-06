@@ -19,7 +19,7 @@ class OldAuctions extends React.Component {
     return (
 
       <div className="container flex-column">
-        <h3 className="auctions_category-title ">Aukcje sztuki dawnej i współczesnej</h3>
+        <h3 className="section_header">Aukcje sztuki dawnej i współczesnej</h3>
         <div className="auctions_category-auctions flex-row">
           {this.state.latestAuctions.map(auction => (
             <div key={auction.id} className="auctions_category-auction flex-column">
