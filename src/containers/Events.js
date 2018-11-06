@@ -2,7 +2,6 @@ import React from 'react'
 import { withRouteData, Link } from 'react-static'
 import Moment from 'react-moment'
 import Markdown from 'react-markdown'
-import TruncateMarkup from 'react-truncate-markup'
 import Search from '../components/Search'
 import BlogNavigation from '../components/BlogNavigation'
 
