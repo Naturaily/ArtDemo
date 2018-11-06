@@ -268,7 +268,7 @@ export default {
     <Html lang="en-US">
       <Head>
         <meta charSet="UTF-8" />
-        <title>Title Land</title>
+        <title>Artinfo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="hehe descriptionezz" />
         <meta name="google-site-verification" content="vDMlfF8AyuuZSYxkC4GcaZFIiSzSq1yHqj5MxsEbWok" />
