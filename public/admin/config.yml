@@ -42,7 +42,9 @@ collections:
         widget: "list"
         allow_add: true
         fields:
-          - {label: "tech-name", name: "tech-name", widget: "string"}
+          - {label: "News tytuł", name: "titlez", widget: string}
+          - {label: "News tło", name: "bgc", widget: image}
+          - {label: "News link", name: "lenk", widget: string}
 
 
   -
