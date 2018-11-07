@@ -9,7 +9,7 @@ import './app.scss'
 
 const App = () => (
   <Router>
-    <div id="root">
+    <div>
       <header className="header">
         <div className="container">
           <nav className="header-nav flex-row">

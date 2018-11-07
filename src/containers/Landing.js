@@ -17,12 +17,12 @@ export default withRouteData(({ landing, posts, events }) => (
       <div className="flex-row">
         <Carousel autoPlayInterval={4000} indicator={false} switcher={false} className="news_carousel">
           {landing.data.news_list.map((object, index) => (
-            <div key={index} style={{ backgroundImage: `url(${object.news.background})` }} className="news_carousel-element">
+            <div key={index} style={{ backgroundImage: `url(${object.background})` }} className="news_carousel-element">
               <div>
                 <span className="news_carousel-box flex-column">
                   <small>Artinforamcje</small>
-                  <h2>{object.news.title}</h2>
-                  <a href={object.news.link}>czytaj więcej</a>
+                  <h2>{object.title}</h2>
+                  <a href={object.link}>czytaj więcej</a>
                 </span>
               </div>
             </div>
