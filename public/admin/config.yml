@@ -37,6 +37,12 @@ collections:
         fields:
           - {label: "Reklama obrazek", name: "advert_first_image", widget: image}
           - {label: "Reklama link", name: "advert_first_link", widget: string}
+      - label: "competences"
+        name: "competences"
+        widget: "list"
+        allow_add: true
+        fields:
+          - {label: "tech-name", name: "tech-name", widget: "string"}
 
 
   -
