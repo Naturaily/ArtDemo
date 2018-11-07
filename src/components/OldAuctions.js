@@ -27,7 +27,9 @@ class OldAuctions extends React.Component {
                 <img src={auction.attributes.image_preview_url} />
               </div>
               <div className="auctions_category-content flex-column justify-between">
-                <small className="auctions_category-date flex-row justify-between"><span>{auction.id}</span>|<span>12:12</span></small>
+                <small className="auctions_category-date flex-row justify-between">
+                  <span>{auction.id}</span>|<span>12:12</span>
+                </small>
                 <h4>{auction.attributes.name}</h4>
                 <small>13 Aukcja Sztuka Dawnej</small>
                 <small className="auctions_category-city ">Warszawa</small>
