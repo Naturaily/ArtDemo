@@ -14,8 +14,6 @@ collections:
     folder: "src/landing"
     create: false
     slug: "{{slug}}"
-    meta:
-      - {label: "Opis Meta", name: "meta_desc", widget: "string"}
     fields:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Tytuł", name: "title", widget: "string"}
@@ -43,25 +41,25 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - label: "Pola SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+          - {label: "Opis tytuł", name: "meta_title", widget: "string"}
+          - {label: "Opis meta(150)", name: "meta_description", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Meta Description(optimally 150 characters)", name: "meta_description", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Slug(url)", name: "slug", widget: "string"}
       - {label: "Data publikacji", name: "publication_date", widget: date}
-      - label: "Od"
-        name: "from"
-        widget: "date"
-        default: ""
-        format: "DD MMM YYYY"
-      - label: "Do"
-        name: "to"
-        widget: "date"
-        default: ""
-        format: "DD MMM YYYY"
-
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Obrazek", name: "image", widget: image}
-      - {label: "Opis", name: "description", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Data rozpoczęcia wydarzenia", name: "from", widget: "date", default: "", format: "D MMMM"}
+      - {label: "Data zakończenia wydarzenia", name: "to", widget: "date", default: "", format: "D MMMM YYYY"}
+      - label: "Główny punkt wydarzenia"
+        name: "event_main_point"
+        widget: "object"
+        fields:
+          - {label: "Nazwa głównego punktu wydarzenia", name: "main_point_name", widget: "string"}
+          - {label: "Data głównego punktu wydarzenia", name: "main_point_datetime", widget: "datetime", default: "", format: "D.M.YYYY, kk:mm"}
+      - {label: "Obrazek główny", name: "image", widget: image}
   -
     name: "reports"
     label: "Relacje"
@@ -69,14 +67,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Meta Description(optimally 150 characters)", name: "meta_description", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Data publikacji", name: "publication_date", widget: date}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Obrazek", name: "image", widget: image}
-      - {label: "Opis", name: "description", widget: "string"}
+
 
   -
     name: "informations"
@@ -85,14 +76,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Meta Description(optimally 150 characters)", name: "meta_description", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Data publikacji", name: "publication_date", widget: date}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Obrazek", name: "image", widget: image}
-      - {label: "Opis", name: "description", widget: "string"}
+
 
   -
     name: "fairs"
@@ -101,11 +85,3 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Meta Description(optimally 150 characters)", name: "meta_description", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Data publikacji", name: "publication_date", widget: date}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Obrazek", name: "image", widget: image}
-      - {label: "Opis", name: "description", widget: "string"}
