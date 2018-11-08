@@ -14,6 +14,8 @@ collections:
     folder: "src/landing"
     create: false
     slug: "{{slug}}"
+    meta:
+      - {label: "Opis Meta", name: "meta_desc", widget: "string"}
     fields:
       - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Tytuł", name: "title", widget: "string"}
