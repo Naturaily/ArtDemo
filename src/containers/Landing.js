@@ -75,8 +75,8 @@ export default withRouteData(({ landing, posts, events }) => (
             </Link>
             <article className="latest_post-details flex-column">
               <span className="latest_post-due">
-                {singleEvent.data.to &&
-                  <small>{singleEvent.data.from} - {singleEvent.data.to}</small>
+                {singleEvent.data.end_date &&
+                  <small>{singleEvent.data.start_date} - {singleEvent.data.end_date}</small>
                 }
               </span>
               <header className="latest_post-header">

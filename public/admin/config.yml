@@ -53,6 +53,7 @@ collections:
       - {label: "Data publikacji", name: "publication_date", widget: "date"}
       - {label: "Data rozpoczęcia wydarzenia", name: "start_date", widget: "date", default: "", format: "D MMMM"}
       - {label: "Data zakończenia wydarzenia", name: "end_date", widget: "date", default: "", format: "D MMMM YYYY"}
+      - {label: "Krótki opis", name: "description", widget: "string"}
       - label: "Główny punkt wydarzenia"
         name: "event_main_point"
         widget: "object"
