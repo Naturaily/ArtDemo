@@ -25,6 +25,7 @@
   "devDependencies": {
     "eslint-config-react-tools": "^1.1.6",
     "extract-text-webpack-plugin": "^3.0.2",
+    "jsona": "^1.2.0",
     "node-sass": "^4.7.2",
     "react-flex-carousel": "^1.1.0",
     "sass-loader": "^6.0.6",

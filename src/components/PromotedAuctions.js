@@ -8,7 +8,7 @@ class PromotedAuctions extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`https://artinfo.naturaily.eu/api/v1/finished/auctions_catalogs`)
+    axios.get(`https://artinfo.naturaily.eu/api/v1/landing_page/upcoming/auctions_catalogs`)
       .then(res => {
         const latestAuctions = res.data.data.slice(0, 6).map(obj => obj);
         this.setState({ latestAuctions });
