@@ -18,7 +18,7 @@ class IncommingAuctions extends React.Component {
 
     axios.get(apiUrl)
     .then(response => dataFormatter.deserialize(response.data))
-    .then(response => response.map(auction => (
+    .then(response => response.slice(0, 4).map(auction => (
       {
         id: auction.id,
         state: auction.state,
@@ -37,7 +37,7 @@ class IncommingAuctions extends React.Component {
   render() {
     return (
       <div className="latest_auctions flex-column">
-        <p className="latest_auctions-heading">Najbliższe aukcje <a href="https://artinfo.naturaily.eu/" target="_blank">Więcej</a></p>
+        <p className="latest_auctions-heading">Najbliższe aukcje <a href="https://artinfo.naturaily.eu/katalogi-aukcyjne" className="text-orange">Więcej</a></p>
         <div className="latest_auctions-wrapper flex-column">
           {this.state.latestAuctions.map(auction => (
             <div key={auction.id} className="latest_auctions-auction">
