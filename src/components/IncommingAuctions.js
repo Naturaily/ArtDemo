@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Moment from 'react-moment'
+import Truncate from 'react-truncate';
 import axios from 'axios';
 import Jsona from 'jsona';
 
@@ -43,17 +45,29 @@ class IncommingAuctions extends React.Component {
                 <img src={auction.thumb} />
               </div>
               <div className="latest_auctions-content flex-column justify-between">
-                <span className="flex-row justify-between">
-                  <small className="left text-left">{auction.date}</small>
-                  <small>|</small>
-                  <small className="right text-right text-orange">{auction.state}</small>
+                <span className="latest_auctions-small flex-row">
+                  <small className="left text-left">
+                    <Moment format="DD.MM.YYYY">
+                        {auction.date}
+                    </Moment>
+                  </small>
+                  <small className="latest_auctions-separator">|</small>
+                  {auction.state == "in_progress" ? (
+                    <small className="right text-right text-orange">aukcja trwa</small>
+                  ) : (
+                    <small className="right text-right"><Moment format="HH.mm">{auction.date}</Moment></small>
+                  )}
                 </span>
-                <h3 className="latest_auctions-house">{auction.name}</h3>
+                <h3 className="latest_auctions-house">
+                  <Truncate>
+                    {auction.name}
+                  </Truncate>
+                </h3>
                 <p className="latest_auctions-category">{auction.auction_house}</p>
-                <span className="flex-row justify-between">
+                <span className="latest_auctions-small flex-row">
                   <small className="left text-left">{auction.city}</small>
                   {auction.type == "live" &&
-                    <small>|</small>
+                    <small className="latest_auctions-separator">|</small>
                   }
                   {auction.type == "live" &&
                     <small className="right text-right">
