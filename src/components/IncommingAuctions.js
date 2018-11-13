@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Moment from 'react-moment'
+import { Link } from 'react-static';
+import Moment from 'react-moment';
 import Truncate from 'react-truncate';
 import axios from 'axios';
 import Jsona from 'jsona';
@@ -21,13 +22,14 @@ class IncommingAuctions extends React.Component {
     .then(response => response.slice(0, 4).map(auction => (
       {
         id: auction.id,
-        state: auction.state,
-        name: auction.name,
-        thumb: auction.image_thumb_url,
-        date: auction.start_date,
-        type: auction.auction_type,
-        city: auction.address.city,
-        auction_house: auction.auction_house.name
+        state:         auction.state,
+        name:          auction.name,
+        thumb:         auction.image_thumb_url,
+        date:          auction.start_date,
+        type:          auction.auction_type,
+        city:          auction.address.city,
+        auction_house: auction.auction_house.name,
+        slug:          auction.slug
 
       })))
     .then(auctionData => this.setState({latestAuctions: auctionData}))
@@ -59,9 +61,11 @@ class IncommingAuctions extends React.Component {
                   )}
                 </span>
                 <h3 className="latest_auctions-house">
-                  <Truncate>
-                    {auction.name}
-                  </Truncate>
+                  <Link to={`https://artinfo.naturaily.eu/katalogi-aukcyjne/${auction.slug}`}>
+                    <Truncate>
+                      {auction.name}
+                    </Truncate>
+                  </Link>
                 </h3>
                 <p className="latest_auctions-category">{auction.auction_house}</p>
                 <span className="latest_auctions-small flex-row">
