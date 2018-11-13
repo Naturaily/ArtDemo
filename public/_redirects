@@ -1,3 +1,2 @@
-/katalogi-aukcyjne/*  https://artinfo.naturaily.eu/katalogi-aukcyjne/:splat 200!
-/live/*  https://artinfo.naturaily.eu/:splat
-/lajf/*  https://artinfo.naturaily.eu/ 200
+/katalogi-aukcyjne/*  https://artinfo.naturaily.eu/katalogi-aukcyjne/:splat 200
+/katalogi/*  https://artinfo.naturaily.eu/katalogi-aukcyjne/:splat 200
