@@ -15,7 +15,7 @@ class IncommingAuctions extends React.Component {
 
   componentDidMount() {
 
-    const apiUrl = "https://artinfo.naturaily.eu/api/v1/landing_page/upcoming/auctions_catalogs"
+    const apiUrl = "/api/v1/landing_page/upcoming/auctions_catalogs"
 
     axios.get(apiUrl)
     .then(response => dataFormatter.deserialize(response.data))
