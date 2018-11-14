@@ -6,6 +6,6 @@
 
 /api/* https://artinfo.naturaily.eu/api/:splat 200!
 
-/assets/* https://artinfo.naturaily.eu/:splat 200!
+/assets/* https://artinfo.naturaily.eu/assets/:splat 200!
 
 /test/* https://jsonplaceholder.typicode.com/:splat 200!
