@@ -7,5 +7,5 @@
 /api/* https://artinfo.naturaily.eu/api/:splat 200!
 
 /assets/* https://artinfo.naturaily.eu/assets/:splat 200!
-
-/test/* https://jsonplaceholder.typicode.com/:splat 200!
+/packs/* https://artinfo.naturaily.eu/packs/:splat 200!
+/wyszukiwarka/* https://artinfo.naturaily.eu/wyszukiwarka/:splat 200!
