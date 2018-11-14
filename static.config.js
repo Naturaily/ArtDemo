@@ -214,6 +214,8 @@ function getLanding () {
 
 export default {
 
+  siteRoot: 'https://artinfodemo.naturaily.eu',
+
   getSiteData: () => ({
     title: 'React Static with Netlify CMS',
   }),
