@@ -1,4 +1,4 @@
 /* /index.html 200!
-/api/* https://artinfo.naturaily.eu/api/:splat 200!
+/api/* https://artinfo.naturaily.eu/:splat 200!
 /katalogi-aukcyjne/*  https://artinfo.naturaily.eu/katalogi-aukcyjne/:splat 200!
 /katalogi/*  https://artinfo.naturaily.eu/katalogi-aukcyjne/:splat 200!
