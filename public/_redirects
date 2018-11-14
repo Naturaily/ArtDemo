@@ -1,4 +1,9 @@
 /aplikacja/* https://artinfo.naturaily.eu/:splat 200!
+
 /katalogi-aukcyjne/* https://artinfo.naturaily.eu/katalogi-aukcyjne/:splat 200!
+
+/wyniki-aukcji/* https://artinfo.naturaily.eu/wyniki-aukcji/:splat 200!
+
 /assets/* https://artinfo.naturaily.eu/:splat 200!
+
 /test/* https://jsonplaceholder.typicode.com/:splat 200!
