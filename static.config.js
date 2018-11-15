@@ -277,7 +277,7 @@ export default {
         <meta name="google-site-verification" content="vDMlfF8AyuuZSYxkC4GcaZFIiSzSq1yHqj5MxsEbWok" />
         <link rel="stylesheet" media="all" href="https://artinfo.naturaily.eu//assets/application-3908255f00736d40b3e8f8b610e6e9128ff5c7324181f172c1a2295f390a8055.css" data-turbolinks-track="reload" />
       </Head>
-      <Body>{children}</Body>
+      <Body className="Landing">{children}</Body>
     </Html>
   ),
   webpack: (config, { defaultLoaders, stage }) => {

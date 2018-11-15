@@ -1,4 +1,4 @@
-.blog_posts {
+.Landing .blog_posts {
   margin-top: 3rem;
 
   &-first_post {
@@ -107,7 +107,7 @@
   }
 }
 
-.latest_post {
+.Landing .latest_post {
   padding-bottom: 65px;
   &-image {
     width: 350px;
