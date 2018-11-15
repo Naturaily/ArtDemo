@@ -11,16 +11,16 @@ class Search extends React.Component {
         <div className="text-center"><h2>Czego szukasz?</h2></div>
         <div className="row">
           <div className="col-sm-12">
-            <div class="global-search" data-search="global">
-              <div class="global-search__input">
-                <input id="searchInput" type="text" autocomplete="off" data-search-input="" placeholder="Wpisz interesujące Cię frazy oddzielone spacjami..."/>
-                <a href="#" data-clear-search="" class="search__clear-input search__clear-input--hidden" title="Wpisz interesujące Cię frazy oddzielone spacjami...">
-                  <span class="icon-close-big"></span>
+            <div className="global-search" data-search="global">
+              <div className="global-search__input">
+                <input id="searchInput" type="text" placeholder="Wpisz interesujące Cię frazy oddzielone spacjami..."/>
+                <a href="#" data-clear-search="" className="search__clear-input search__clear-input--hidden" title="Wpisz interesujące Cię frazy oddzielone spacjami...">
+                  <span className="icon-close-big"></span>
                 </a>
               </div>
-              <div class="global-search__actions">
-                <button type="submit" class="btn-oval btn-oval--orange" data-search-submit="" title="Wyszukaj">
-                    <span class="icon icon-search"></span>
+              <div className="global-search__actions">
+                <button type="submit" className="btn-oval btn-oval--orange" title="Wyszukaj">
+                  <span className="icon icon-search"></span>
                 </button>
                </div>
             </div>
