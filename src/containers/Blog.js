@@ -5,7 +5,7 @@ import Search from '../components/Search'
 //
 
 export default withRouteData(({ posts }) => (
-  <main>
+  <main className="container">
     <Search/>
     <BlogNavigation/>
     {posts.slice(0, 1).map((post, index) => (

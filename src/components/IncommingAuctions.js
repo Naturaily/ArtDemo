@@ -38,50 +38,50 @@ class IncommingAuctions extends React.Component {
 
   render() {
     return (
-      <div className="latest_auctions flex-column">
-        <p className="latest_auctions-heading">Najbliższe aukcje <a href="/katalogi-aukcyjne/" className="text-orange">Więcej</a></p>
-        <div className="latest_auctions-wrapper flex-column">
-          {this.state.latestAuctions.map(auction => (
-            <div key={auction.id} className="latest_auctions-auction">
-              <div className="latest_auctions-image">
-                <img src={auction.thumb} />
-              </div>
-              <div className="latest_auctions-content flex-column justify-between">
-                <span className="latest_auctions-small flex-row">
-                  <small className="left text-left">
-                    <Moment format="DD.MM.YYYY">
-                        {auction.date}
-                    </Moment>
-                  </small>
-                  <small className="latest_auctions-separator">|</small>
-                  {auction.state == "in_progress" ? (
-                    <small className="right text-right text-orange">aukcja trwa</small>
-                  ) : (
-                    <small className="right text-right"><Moment format="HH.mm">{auction.date}</Moment></small>
-                  )}
-                </span>
-                <h3 className="latest_auctions-house">
-                  <Link to={`https://artinfo.naturaily.eu/katalogi-aukcyjne/${auction.slug}`}>
-                    <Truncate>
-                      {auction.name}
-                    </Truncate>
-                  </Link>
-                </h3>
-                <p className="latest_auctions-category">{auction.auction_house}</p>
-                <span className="latest_auctions-small flex-row">
-                  <small className="left text-left">{auction.city}</small>
-                  {auction.type == "live" &&
-                    <small className="latest_auctions-separator">|</small>
-                  }
-                  {auction.type == "live" &&
-                    <small className="right text-right">
-                      relacja LIVE
+      <div className="col-lg-4">
+        <div className="latest_auctions row align-content-center flex-column">
+          <p className="latest_auctions-heading col-sm-11 justify-content-between">Najbliższe aukcje <a href="/katalogi-aukcyjne/" className="text-orange">Więcej</a></p>
+          <div className="latest_auctions-wrapper col-sm-11 d-flex flex-column">
+            {this.state.latestAuctions.map(auction => (
+              <div key={auction.id} className="latest_auctions-auction row">
+                <div className="latest_auctions-image col-sm-3">
+                  <img src={auction.thumb} />
+                </div>
+                <div className="latest_auctions-content col-sm-9 d-flex flex-column justify-content-between">
+                  <span className="latest_auctions-small text--muted flex-row">
+                    <small className="text-left">
+                      <Moment format="DD.MM.YYYY">{auction.date}</Moment>
                     </small>
-                  }
-                </span>
+                    <small className="latest_auctions-separator">|</small>
+                    {auction.state == "in_progress" ? (
+                      <small className="text-right text-orange">aukcja trwa</small>
+                    ) : (
+                      <small className="text-right"><Moment format="HH.mm">{auction.date}</Moment></small>
+                    )}
+                  </span>
+                  <h3 className="latest_auctions-house">
+                    <Link to={`/katalogi-aukcyjne/${auction.slug}`}>
+                      <Truncate>
+                        {auction.name}
+                      </Truncate>
+                    </Link>
+                  </h3>
+                  <p className="latest_auctions-category">{auction.auction_house}</p>
+                  <span className="latest_auctions-small text--muted flex-row">
+                    <small className="left text-left">{auction.city}</small>
+                    {auction.type == "live" &&
+                      <small className="latest_auctions-separator">|</small>
+                    }
+                    {auction.type == "live" &&
+                      <small className="right text-right">
+                        relacja LIVE
+                      </small>
+                    }
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     );

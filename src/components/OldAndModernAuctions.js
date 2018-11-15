@@ -8,7 +8,7 @@ import Jsona from 'jsona';
 
 const dataFormatter = new Jsona();
 
-class PromotedAuctions extends React.Component {
+class OldAndModernAuctions extends React.Component {
   state = {
     latestAuctions: [],
     store: []
@@ -40,34 +40,29 @@ class PromotedAuctions extends React.Component {
   render() {
     return (
 
-      <section className="">
-        <h2 className="section_header">Polecane aukcje</h2>
-        <div className="auctions_promoted-auctions row">
+      <section>
+        <h3 className="section_header">Najnowsze aukcje</h3>
+        <div className="auctions_category-auctions row">
           {this.state.latestAuctions.map(auction => (
-            <div key={auction.id} className="auctions_promoted-auction col-sm-4">
-              <div className="auctions_promoted-image">
+            <div key={auction.id} className="auctions_category-auction col-sm-2">
+              <div className="auctions_category-image ">
                 <img src={auction.thumb} />
               </div>
-              <div className="auctions_promoted-content">
-                <p>
-                  <small className="auctions_promoted-date"><span><Moment format="DD.MM.YYYY">{auction.date}</Moment></span>|<span><Moment format="HH.mm">{auction.date}</Moment></span></small>
-                  <small className="auctions_promoted-city">{auction.city}</small>
-                </p>
-                <h3 className="auctions_promoted-title">
-                  <Link to={`/katalogi-aukcyjne/${auction.slug}`}>
-                    <Truncate>
-                      {auction.name}
-                    </Truncate>
-                  </Link>
-                </h3>
-                <small className="auctions_promoted-type text--muted">{auction.auction_house}</small>
-                <br/>
-                <Link to={`/katalogi-aukcyjne/${auction.slug}`} className="btn btn__default">
-                  Zobacz Katalog
-                </Link>
+              <div className="auctions_category-content flex-column justify-between">
+                <small className="auctions_category-date flex-row justify-between">
+                  <span><Moment format="DD.MM.YYYY">{auction.date}</Moment></span>|<span><Moment format="HH.mm">{auction.date}</Moment></span>
+                </small>
+                <h4>{auction.auction_house}</h4>
+                <small>{auction.name}</small>
+                <small className="auctions_category-city ">{auction.city}</small>
               </div>
             </div>
           ))}
+          <div className="auctions_category-more">
+            <span className="auctions_category-auction--more">
+
+            </span>
+          </div>
         </div>
       </section>
     );
@@ -75,5 +70,5 @@ class PromotedAuctions extends React.Component {
 }
 
 export default () => (
-  <PromotedAuctions/>
+  <OldAndModernAuctions/>
 )

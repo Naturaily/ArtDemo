@@ -7,7 +7,7 @@ import BlogNavigation from '../components/BlogNavigation'
 //
 
 export default withRouteData(({ events }) => (
-  <main>
+  <main className="container">
     <Search/>
     <BlogNavigation/>
     <div className="container flex-row blog_posts">

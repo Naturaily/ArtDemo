@@ -5,7 +5,7 @@ seo:
   meta_description: 'Wystawa młoda sztuka polska, bardzo piękna, fajna itp'
   meta_title: Wystawa młoda sztuka polska
 title: Wystawa młoda sztuka polska
-slug: wystawa-pawla-cybulskiego-warszawa
+slug: wystawa-pawla-cybulskiego-warszawa1
 publication_date: '2018-11-09'
 start_date: 18 November
 end_date: 30 November 2018

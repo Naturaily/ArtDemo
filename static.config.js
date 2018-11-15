@@ -219,6 +219,7 @@ export default {
   getSiteData: () => ({
     title: 'React Static with Netlify CMS',
   }),
+
   getRoutes: async () => {
     const posts = await getPosts()
     const events = await getEvents()
@@ -266,7 +267,7 @@ export default {
       },
     ]
   },
-  Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
+  Document: ({ Html, Head, Body, children, siteData, renderMeta, Link }) => (
     <Html lang="en-US">
       <Head>
         <meta charSet="UTF-8" />
@@ -274,6 +275,7 @@ export default {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="hehe descriptionezz" />
         <meta name="google-site-verification" content="vDMlfF8AyuuZSYxkC4GcaZFIiSzSq1yHqj5MxsEbWok" />
+        <link rel="stylesheet" media="all" href="https://artinfo.naturaily.eu//assets/application-3908255f00736d40b3e8f8b610e6e9128ff5c7324181f172c1a2295f390a8055.css" data-turbolinks-track="reload" />
       </Head>
       <Body>{children}</Body>
     </Html>
