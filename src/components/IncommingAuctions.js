@@ -70,11 +70,11 @@ class IncommingAuctions extends React.Component {
                     )}
                   </span>
                   <h3 className="latest_auctions-house">
-                    <Link to={`/katalogi-aukcyjne/${auction.slug}`}>
+                    <a href={`/katalogi-aukcyjne/${auction.slug}`}>
                       <Truncate>
                         {auction.name}
                       </Truncate>
-                    </Link>
+                    </a>
                   </h3>
                   <p className="latest_auctions-category">{auction.auction_house}</p>
                   <span className="latest_auctions-small text--muted flex-row">

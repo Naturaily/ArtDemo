@@ -68,9 +68,9 @@ class OldAndModernAuctions extends React.Component {
           ))}
           <div className="auctions_category-more">
             <div className="auctions_category-more--auction">
-              <Link to="/katalogi-aukcyjne"className="btn-oval btn-oval--orange icon icon-calendar">
+              <a href="/katalogi-aukcyjne" className="btn-oval btn-oval--orange icon icon-calendar">
                 <span>Pokaż pełne kalendarium</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
