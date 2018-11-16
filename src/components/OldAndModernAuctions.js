@@ -52,8 +52,16 @@ class OldAndModernAuctions extends React.Component {
                 <small className="auctions_category-date flex-row justify-between">
                   <span><Moment format="DD.MM.YYYY">{auction.date}</Moment></span>|<span><Moment format="HH.mm">{auction.date}</Moment></span>
                 </small>
-                <h4>{auction.auction_house}</h4>
-                <small>{auction.name}</small>
+                <h3 className="auctions_category-house">
+                  <Truncate>
+                    {auction.auction_house}
+                  </Truncate>
+                </h3>
+                <small className="auctions_category-title">
+                  <Truncate>
+                    {auction.name}
+                  </Truncate>
+                </small>
                 <small className="auctions_category-city ">{auction.city}</small>
               </div>
             </div>
