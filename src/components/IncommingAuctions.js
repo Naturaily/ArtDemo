@@ -40,6 +40,10 @@ class IncommingAuctions extends React.Component {
     return (
       <div className="col-lg-4">
         <div className="latest_auctions row align-content-center flex-column">
+          <div class="latest_auctions-socials">
+            <a href="https://www.facebook.com/Artinfopl-111297295564594" target="_blank" className="icon icon-facebook"></a>
+            <a href="https://twitter.com/artinfopl" target="_blank" className="icon icon-twitter"></a>
+          </div>
           <p className="latest_auctions-heading col-sm-11 justify-content-between">Najbliższe aukcje <a href="/katalogi-aukcyjne/" className="text-orange">Więcej</a></p>
           <div className="latest_auctions-wrapper col-sm-11 d-flex flex-column">
             {this.state.latestAuctions.map(auction => (
@@ -54,7 +58,13 @@ class IncommingAuctions extends React.Component {
                     </small>
                     <small className="latest_auctions-separator">|</small>
                     {auction.state == "in_progress" ? (
-                      <small className="text-right text-orange">aukcja trwa</small>
+                      <small className="latest_auctions-live text-right text-orange">
+                        <span class="icon icon-live">
+                          <span class="path1"></span>
+                          <span class="path2"></span>
+                        </span>
+                        aukcja trwa
+                      </small>
                     ) : (
                       <small className="text-right"><Moment format="HH.mm">{auction.date}</Moment></small>
                     )}

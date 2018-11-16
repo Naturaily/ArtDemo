@@ -1,3 +1,10 @@
+.app__header {
+  .app__logo .link--muted {
+    margin-left: 60px;
+    margin-right: -10px;
+  }
+}
+
 .Landing .news_carousel {
   // display: flex;
   // width: 69%;
@@ -19,6 +26,11 @@
     top: 60px;
     left: 60px;
     padding: 10px 60px 15px 20px;
+    display: flex;
+
+    small {
+      color: $color-manatee;
+    }
 
     h2 {
       font-size: 32px;
@@ -27,7 +39,8 @@
     }
 
     a {
-      text-align: right;
+      color: $color-orange;
+      margin-left: auto;
     }
   }
 
@@ -44,8 +57,30 @@
   background-color: #F7F7F7;
   box-shadow: 0 4px 4px -2px rgba(92,94,102,0.15);
   height: 100%;
+  position: relative;
   // z-index: 1;
-  // width: 400px;
+  // width: 400px;\
+
+  &-socials {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 15px;
+    top: 35px;
+
+    a {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-live {
+    display: flex;
+    .icon {
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  }
 
   &-auction {
     display: flex;
@@ -79,6 +114,7 @@
 
   &-wrapper {
     padding-left: 30px;
+    padding-right: 50px;
     flex: 1 1 auto;
     justify-content: space-evenly;
   }
@@ -89,8 +125,9 @@
   }
 
   &-heading {
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 10px;
+    padding-right: 50px;
     margin-bottom: 0;
     display: flex;
     flex: 0 0 auto;

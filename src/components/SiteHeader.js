@@ -15,10 +15,13 @@ class SiteHeader extends React.Component {
                 <Link to="/">
                   <img src={siteLogo} alt="Artinfo logo" />
                 </Link>
+                <Link to="/katalogi-aukcyjne" className="link--muted">Aukcje</Link>
+                <Link to="/wyniki-aukcji" className="link--muted">Wyniki</Link>
+                <Link to="/wydarzenia" className="link--muted">Wydarzenia</Link>
               </div>
             </div>
             <div className="col ml-auto app__user-panel pr-sm-0">
-              <Link to="/aktualnosci" className="link--muted">Aktualności</Link>
+              <Link to="/logowanie" className="link--muted">Logowanie</Link>
             </div>
           </nav>
         </div>
