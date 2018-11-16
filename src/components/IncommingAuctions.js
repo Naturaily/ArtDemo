@@ -68,12 +68,12 @@ class IncommingAuctions extends React.Component {
                   </h3>
                   <p className="latest_auctions-category">{auction.auction_house}</p>
                   <span className="latest_auctions-small text--muted flex-row">
-                    <small className="left text-left">{auction.city}</small>
+                    <small className="text-left">{auction.city}</small>
                     {auction.type == "live" &&
                       <small className="latest_auctions-separator">|</small>
                     }
                     {auction.type == "live" &&
-                      <small className="right text-right">
+                      <small className="text-right">
                         relacja LIVE
                       </small>
                     }

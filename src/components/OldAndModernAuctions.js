@@ -41,7 +41,7 @@ class OldAndModernAuctions extends React.Component {
     return (
 
       <section>
-        <h3 className="section_header">Najnowsze aukcje</h3>
+        <h2 className="section_header">Najnowsze aukcje</h2>
         <div className="auctions_category-auctions row">
           {this.state.latestAuctions.map(auction => (
             <div key={auction.id} className="auctions_category-auction col-sm-2">
@@ -59,9 +59,11 @@ class OldAndModernAuctions extends React.Component {
             </div>
           ))}
           <div className="auctions_category-more">
-            <span className="auctions_category-auction--more">
-
-            </span>
+            <div className="auctions_category-more--auction">
+              <Link to="/katalogi-aukcyjne"className="btn-oval btn-oval--orange icon icon-calendar">
+                <span>Pokaż pełne kalendarium</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

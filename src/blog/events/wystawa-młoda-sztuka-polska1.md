@@ -10,6 +10,7 @@ publication_date: '2018-11-09'
 start_date: 18 November
 end_date: 30 November 2018
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper consectetur eros eget convallis. Pellentesque egestas ipsum nisi, in facilisis risus porta vel. Nulla fermentum erat et est molestie tincidunt. Mauris ultrices, odio id maximus posuere, nisl lacus lobortis ex, a aliquet est erat vitae magna.'
+city: Wrocław
 event_main_point:
   main_point_datetime: '25.11.2018, 10:08'
   main_point_name: Wernisaż

@@ -8,7 +8,7 @@ class Search extends React.Component {
   render() {
     return (
       <section>
-        <div className="text-center"><h2>Czego szukasz?</h2></div>
+        <div className="search__header text-center"><h2>Czego szukasz?</h2></div>
         <div className="row">
           <div className="col-sm-12">
             <div className="global-search" data-search="global">

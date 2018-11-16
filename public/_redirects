@@ -5,6 +5,7 @@
 /wyniki-aukcji/* https://artinfo.naturaily.eu/wyniki-aukcji/:splat 200!
 
 /api/* https://artinfo.naturaily.eu/api/:splat 200!
+/logowanie/* https://artinfo.naturaily.eu/logowanie/:splat 200!
 
 /assets/* https://artinfo.naturaily.eu/assets/:splat 200!
 /packs/* https://artinfo.naturaily.eu/packs/:splat 200!

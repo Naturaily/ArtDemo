@@ -186,7 +186,7 @@
   }
 
   &-auction {
-    padding-bottom: 30px;
+    padding-bottom: 60px;
   }
 
   &-image {
@@ -273,7 +273,7 @@
   &-more {
     padding: 0 15px;
 
-    span {
+    &--auction {
       display: flex;
     	height: 150px;
     	width: 127px;
@@ -281,6 +281,35 @@
     	border-radius: 3.2px;
     	background-color: #FBFCFD;
     	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+      justify-content: center;
+    }
+
+    .btn-oval {
+      color: #fff;
+      overflow: visible;
+      width: 40px;
+      height: 40px;
+      align-self: center;
+      margin-bottom: 46px;
+
+      span {
+        color: $color-orange;
+        font-family: "Nunito", sans-serif;
+        display: flex;
+        width: 70px;
+        line-height: 18px;
+        font-size: 12px;
+        margin-left: -15px;
+        padding-top: 10px;
+      }
+
+      &::before {
+        line-height: 39px;
+      }
+
+      &:hover {
+        color: #fff;
+      }
     }
   }
 

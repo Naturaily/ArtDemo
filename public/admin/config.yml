@@ -4,6 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
+logo_url: https://artinfo.naturaily.eu/assets/logo-cc64e7ad1f37786ebaa7c5c0100a63fae4e61983dd59c62a7ea72460f064bbd5.svg
+
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
@@ -55,6 +57,7 @@ collections:
       - {label: "Data rozpoczęcia wydarzenia", name: "start_date", widget: "date", default: "", format: "D MMMM"}
       - {label: "Data zakończenia wydarzenia", name: "end_date", widget: "date", default: "", format: "D MMMM YYYY"}
       - {label: "Krótki opis", name: "description", widget: "string"}
+      - {label: "Miasto", name: "city", widget: "string"}
       - label: "Główny punkt wydarzenia"
         name: "event_main_point"
         widget: "object"

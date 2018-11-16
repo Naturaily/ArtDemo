@@ -41,7 +41,7 @@ class PromotedAuctions extends React.Component {
     return (
 
       <section className="">
-        <h2 className="section_header">Polecane aukcje</h2>
+        <h2 className="section_header">Polecamy</h2>
         <div className="auctions_promoted-auctions row">
           {this.state.latestAuctions.map(auction => (
             <div key={auction.id} className="auctions_promoted-auction col-sm-4">
