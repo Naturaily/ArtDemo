@@ -17,7 +17,7 @@ class SiteHeader extends React.Component {
                 </Link>
                 <Link to="/katalogi-aukcyjne" className="link--muted">Aukcje</Link>
                 <Link to="/wyniki-aukcji" className="link--muted">Wyniki</Link>
-                <Link to="/wydarzenia" className="link--muted">Wydarzenia</Link>
+                <Link to="/aktualnosci" className="link--muted">Aktualnosci</Link>
               </div>
             </div>
             <div className="col ml-auto app__user-panel pr-sm-0">

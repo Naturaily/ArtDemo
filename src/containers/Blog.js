@@ -28,7 +28,7 @@ export default withRouteData(({ posts }) => (
     ))}
     <div className="row">
       <ul className="blog_posts-latest_posts col-sm-9">
-        {events.map((singleEvent, index) => (
+        {posts.map((singleEvent, index) => (
           <li key={index} className="blog_posts-latest_post row">
             <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="latest_post-image col-sm-4">
               <img
@@ -63,7 +63,7 @@ export default withRouteData(({ posts }) => (
           <h2 className="section_header">Popularne</h2>
         </header>
         <ul className="blog_posts-aside_popular">
-          {events.map((singleEvent, index) => (
+          {posts.map((singleEvent, index) => (
             <li key={index} className="aside_popular-post row">
               <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="aside_popular-image col-sm-4">
                 <img src={singleEvent.data.image} alt="" />

@@ -10,26 +10,25 @@ export default withRouteData(({ events }) => (
   <main className="container">
     <Search/>
     <BlogNavigation/>
-    <div className="container flex-row blog_posts">
-      <ul className="blog_posts-latest_posts flex-column">
+    <div className="row">
+      <ul className="blog_posts-latest_posts col-sm-9">
         {events.map((singleEvent, index) => (
-          <li key={index} className="blog_posts-latest_post flex-row">
-            <Link to={`/wydarzenia/${singleEvent.data.slug}`} className="latest_post-image">
+          <li key={index} className="blog_posts-latest_post row">
+            <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="latest_post-image col-sm-4">
               <img
                 className=""
                 src={singleEvent.data.image}
                 alt="" />
             </Link>
-            <article className="latest_post-details flex-column">
+            <article className="latest_post-details col-sm-8">
               <span className="latest_post-due">
-                {singleEvent.data.to &&
-                  <small>{singleEvent.data.from} - {singleEvent.data.to}</small>
+                {singleEvent.data.end_date &&
+                  <small>{singleEvent.data.start_date} - {singleEvent.data.end_date}</small>
                 }
               </span>
               <header className="latest_post-header">
                 <h2>{singleEvent.data.title}</h2>
               </header>
-              {/* <p className="latest_post-location">ShiftExpression | Bielsko-Biała</p> */}
               <section className="latest_post-description">
                 <p>
                   {singleEvent.data.description}
@@ -43,36 +42,29 @@ export default withRouteData(({ events }) => (
           </li>
         ))}
       </ul>
-      <aside className="blog_posts-aside flex-column">
+      <aside className="blog_posts-aside col-sm-3">
         <header>
-          <h3 className="section_header">Popularne</h3>
+          <h2 className="section_header">Popularne</h2>
         </header>
-        <ul className="blog_posts-aside_popular flex-column">
+        <ul className="blog_posts-aside_popular">
           {events.map((singleEvent, index) => (
-            <li key={index} className="aside_popular-post">
-              <Link to={`/wydarzenia/${singleEvent.data.slug}`} className="aside_popular-image">
-                <img
-                  className=""
-                  src={singleEvent.data.image}
-                  alt="" />
+            <li key={index} className="aside_popular-post row">
+              <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="aside_popular-image col-sm-4">
+                <img src={singleEvent.data.image} alt="" />
               </Link>
+              <article className="aside_popular-details col-sm-8">
+                <span className="aside_popular-category">
+                  {singleEvent.data.category}
+                </span>
+                <header className="aside_popular-header">
+                  <h2>{singleEvent.data.title}</h2>
+                </header>
+              </article>
             </li>
           ))}
         </ul>
-        <section className="blog_posts-aside_categories">
-          <header>
-            <h3 className="section_header">Kategorie</h3>
-          </header>
-          <ul>
-            <li><a>Link</a></li>
-            <li><a>Link</a></li>
-            <li><a>Link</a></li>
-            <li><a>Link</a></li>
-            <li><a>Link</a></li>
-            <li><a>Link</a></li>
-          </ul>
-        </section>
       </aside>
     </div>
+
   </main>
 ))
