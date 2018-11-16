@@ -15,8 +15,8 @@ class SiteHeader extends React.Component {
                 <Link to="/">
                   <img src={siteLogo} alt="Artinfo logo" />
                 </Link>
-                <Link to="/katalogi-aukcyjne" className="link--muted">Aukcje</Link>
-                <Link to="/wyniki-aukcji" className="link--muted">Wyniki</Link>
+                <Link to="https://artinfodemo.naturaily.eu/katalogi-aukcyjne" className="link--muted">Aukcje</Link>
+                <Link to="https://artinfodemo.naturaily.eu/wyniki-aukcji" className="link--muted">Wyniki</Link>
                 <Link to="/aktualnosci" className="link--muted">Aktualnosci</Link>
               </div>
             </div>
