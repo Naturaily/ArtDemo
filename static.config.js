@@ -275,7 +275,7 @@ export default {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="hehe descriptionezz" />
         <meta name="google-site-verification" content="vDMlfF8AyuuZSYxkC4GcaZFIiSzSq1yHqj5MxsEbWok" />
-        <link rel="stylesheet" media="all" href="https://artinfo.naturaily.eu//assets/application-3908255f00736d40b3e8f8b610e6e9128ff5c7324181f172c1a2295f390a8055.css" data-turbolinks-track="reload" />
+        <link rel="stylesheet" media="all" href="https://artinfo.naturaily.eu/assets/application-162a58540ba54e4bc9710b87c71e5e84c3ed10d4180b33b174e3fe9cb5c11091.css" data-turbolinks-track="reload" />
       </Head>
       <Body className="Landing">{children}</Body>
     </Html>
