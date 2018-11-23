@@ -65,6 +65,13 @@ collections:
           - {label: "Nazwa głównego punktu wydarzenia", name: "main_point_name", widget: "string"}
           - {label: "Data głównego punktu wydarzenia", name: "main_point_datetime", widget: "datetime", default: "", format: "D.M.YYYY, kk:mm"}
       - {label: "Obrazek główny", name: "image", widget: image}
+      - label: "Obrazek główny"
+        name: "image"
+        widget: "image"
+        options:
+          media_library:
+            config:
+              multiple: true
       - {label: "Treść artykułu", name: "body", widget: "markdown"}
       - {label: "Patronat medialny(logo patrona)", name: "patronage", widget: "image"}
   -
