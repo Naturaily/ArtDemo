@@ -7,7 +7,10 @@ publish_mode: editorial_workflow
 logo_url: https://artinfo.naturaily.eu/assets/logo-cc64e7ad1f37786ebaa7c5c0100a63fae4e61983dd59c62a7ea72460f064bbd5.svg
 
 media_folder: "public/uploads"
-
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 917005ac46760d4f595b
 public_folder: "/uploads"
 
 collections:
