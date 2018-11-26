@@ -14,7 +14,7 @@ city: Wrocław
 event_main_point:
   main_point_datetime: '16.11.2018, 11:36'
   main_point_name: spotkanie
-image: /uploads/image2.jpg
+image: /uploads/3lh6vdf.jpg
 patronage: /uploads/naturaily-logo-svg.svg
 ---
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor tellus, fermentum nec feugiat quis, tincidunt et lectus. In hac habitasse platea dictumst. Duis facilisis tincidunt suscipit. Vivamus id nunc vestibulum, tincidunt diam vulputate, aliquet enim. Vestibulum iaculis interdum luctus. Mauris in erat at lectus porttitor volutpat. Etiam at efficitur sem. Pellentesque imperdiet et ligula facilisis pretium. Cras sollicitudin lacinia metus, a malesuada dui convallis eget. In fringilla eleifend odio quis mattis. Proin faucibus eu dui quis auctor.
