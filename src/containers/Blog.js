@@ -13,7 +13,7 @@ export default withRouteData(({ posts }) => (
         <Link to={`/${post.data.category}/${post.data.slug}`} className="blog_posts-image">
           <img
             className="image"
-            src={post.data.image}
+            src={post.data.main_image}
             alt="" />
         </Link>
         <span className="blog_posts-box text-center flex-column">
