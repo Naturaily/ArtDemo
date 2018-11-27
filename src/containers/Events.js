@@ -17,7 +17,7 @@ export default withRouteData(({ events }) => (
             <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="latest_post-image col-sm-4">
               <img
                 className=""
-                src={singleEvent.data.image}
+                src={singleEvent.data.main_image}
                 alt="" />
             </Link>
             <article className="latest_post-details col-sm-8">

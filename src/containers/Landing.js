@@ -46,7 +46,7 @@ export default withRouteData(({ landing, posts, events }) => (
         <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="blog_posts-image">
           <img
             className="image"
-            src={singleEvent.data.image}
+            src={singleEvent.data.main_image}
             alt="" />
         </Link>
         <span className="blog_posts-box text-center flex-column">
