@@ -3,6 +3,7 @@ import { withRouteData, Link } from 'react-static'
 import Moment from 'react-moment'
 import Markdown from 'react-markdown'
 import Search from '../components/Search'
+import siteLogo from '../artinfo.svg'
 
 //
 
@@ -20,24 +21,24 @@ export default withRouteData(({ singleEvent }) => (
         <span>{singleEvent.data.start_date} - {singleEvent.data.end_date}</span>
       </div>
       <div className="post-event col-sm-12 text-center">
-        {singleEvent.data.event_main_point.main_point_name}: {singleEvent.data.event_main_point.main_point_datetime}
+        Wernisaż: {singleEvent.data.vernissage_date}
       </div>
       <figure className="post-image col-sm-12">
-        <img className="image" src={singleEvent.data.image} alt="" />
+        <img className="image" src={singleEvent.data.main_image} alt="" />
       </figure>
     </div>
     <div className="post-main">
       <div className="row">
         <div className="post-body col-sm-12">
-          <p className="text-muted"><Markdown source={singleEvent.content} escapeHtml={false} /></p>
+          <p className="text-muted"><Markdown source={singleEvent.body} escapeHtml={false} /></p>
         </div>
       </div>
       <div className="post-footer row">
         <div className="col-sm-6 ">
-          <p className="post-footer-date"><strong>{singleEvent.data.event_main_point.main_point_name}:</strong>{singleEvent.data.event_main_point.main_point_datetime}</p>
+          <p className="post-footer-date"><strong>Wernisaż:</strong>{singleEvent.data.vernissage_date}</p>
         </div>
         <div className="post-media col-sm-6 text-right">
-          <p>patronat medialny: </p><img className="image" src={singleEvent.data.patronage} alt="" />
+          <p>patronat medialny: </p><img className="image" src={siteLogo} alt="" />
         </div>
       </div>
     </div>

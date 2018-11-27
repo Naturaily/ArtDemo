@@ -33,7 +33,7 @@ export default withRouteData(({ posts }) => (
             <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="latest_post-image col-sm-4">
               <img
                 className=""
-                src={singleEvent.data.image}
+                src={singleEvent.data.main_image}
                 alt="" />
             </Link>
             <article className="latest_post-details col-sm-9">
@@ -66,7 +66,7 @@ export default withRouteData(({ posts }) => (
           {posts.map((singleEvent, index) => (
             <li key={index} className="aside_popular-post row">
               <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="aside_popular-image col-sm-4">
-                <img src={singleEvent.data.image} alt="" />
+                <img src={singleEvent.data.main_image} alt="" />
               </Link>
               <article className="aside_popular-details col-sm-8">
                 <span className="aside_popular-category">
