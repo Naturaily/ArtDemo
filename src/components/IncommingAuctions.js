@@ -49,7 +49,9 @@ class IncommingAuctions extends React.Component {
             {this.state.latestAuctions.map(auction => (
               <div key={auction.id} className="latest_auctions-auction row">
                 <div className="latest_auctions-image col-sm-3">
-                  <img src={auction.thumb} />
+                  <a href={`/katalogi-aukcyjne/${auction.slug}`}>
+                    <img src={auction.thumb} />
+                  </a>
                 </div>
                 <div className="latest_auctions-content col-sm-9 d-flex flex-column justify-content-between">
                   <span className="latest_auctions-small text--muted flex-row">

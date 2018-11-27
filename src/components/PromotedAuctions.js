@@ -46,7 +46,9 @@ class PromotedAuctions extends React.Component {
           {this.state.latestAuctions.map(auction => (
             <div key={auction.id} className="auctions_promoted-auction col-sm-4">
               <div className="auctions_promoted-image">
-                <img src={auction.thumb} />
+                <Link to={`/katalogi-aukcyjne/${auction.slug}`}>
+                  <img src={auction.thumb} />
+                </Link>
               </div>
               <div className="auctions_promoted-content">
                 <p>

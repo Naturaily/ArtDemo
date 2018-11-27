@@ -46,16 +46,20 @@ class OldAndModernAuctions extends React.Component {
           {this.state.latestAuctions.map(auction => (
             <div key={auction.id} className="auctions_category-auction col-sm-2">
               <div className="auctions_category-image ">
-                <img src={auction.thumb} />
+                <a href={`/katalogi-aukcyjne/${auction.slug}`}>
+                  <img src={auction.thumb} />
+                </a>
               </div>
               <div className="auctions_category-content flex-column justify-between">
                 <small className="auctions_category-date flex-row justify-between">
                   <span><Moment format="DD.MM.YYYY">{auction.date}</Moment></span>|<span><Moment format="HH.mm">{auction.date}</Moment></span>
                 </small>
                 <h3 className="auctions_category-house">
-                  <Truncate>
-                    {auction.auction_house}
-                  </Truncate>
+                  <a href={`/katalogi-aukcyjne/${auction.slug}`}>
+                    <Truncate>
+                      {auction.auction_house}
+                    </Truncate>
+                  </a>
                 </h3>
                 <small className="auctions_category-title">
                   <Truncate>
