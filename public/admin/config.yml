@@ -11,7 +11,7 @@ media_library:
   name: uploadcare
   config:
     publicKey: 917005ac46760d4f595b
-    imagesOnly: true
+    imagesOnly: false
     multiple: true
 
 public_folder: "/uploads"
