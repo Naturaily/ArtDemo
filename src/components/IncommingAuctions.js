@@ -76,7 +76,11 @@ class IncommingAuctions extends React.Component {
                       </Truncate>
                     </a>
                   </h3>
-                  <p className="latest_auctions-category">{auction.auction_house}</p>
+                  <p className="latest_auctions-category">
+                    <Truncate>
+                      {auction.auction_house}
+                    </Truncate>
+                  </p>
                   <span className="latest_auctions-small text--muted flex-row">
                     <small className="text-left">{auction.city}</small>
                     {auction.type == "live" &&
