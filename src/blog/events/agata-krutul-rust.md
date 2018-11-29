@@ -41,7 +41,6 @@ content: |-
   płaszczyznę obrazu w zgodzie z wolą natury.
 
    
-
   Agata Krutul
 additional_fields: {}
 image_gallery:
