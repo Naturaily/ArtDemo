@@ -67,7 +67,7 @@ collections:
       - {label: "Data publikacji", name: "publication_date", widget: "date"}
       - {label: "Data rozpoczęcia", name: "start_date", widget: "date", default: "", format: "D MMMM"}
       - {label: "Data zakończenia", name: "end_date", widget: "date", default: "", format: "D MMMM YYYY"}
-      - {label: "Data wernisażu", name: "vernissage_date", widget: "datetime", default: "", format: "D.M.YYYY, kk:mm"}
+      - {label: "Data wernisażu", name: "vernissage_date", widget: "datetime", default: "", format: "D.M.YYYY, kk:mm", required: false}
       - {label: "Krótki opis", name: "description", widget: "string"}
       - {label: "Miasto", name: "city", widget: "string"}
       - label: "Obrazek główny"
@@ -78,9 +78,9 @@ collections:
         name: "additional_fields"
         widget: "object"
         fields:
-          - {label: "Patronat Artinfo", name: "artinfo_patronage", widget: "boolean"}
-          - {label: "Post wyróżniony", name: "featured", widget: "boolean"}
-          - {label: "Miejsce wystawy", name: "exhibition_location", widget: "string"}
+          - {label: "Patronat Artinfo", name: "artinfo_patronage", widget: "boolean", required: false}
+          - {label: "Post wyróżniony", name: "featured", widget: "boolean", required: false}
+          - {label: "Miejsce wystawy", name: "exhibition_location", widget: "string", required: false}
       - {label: "Artyści", name: "artists", widget: "string"}
       - {label: "Galerie", name: "galleries", widget: "string"}
       - {label: "Patroni medialni", name: "patronage", widget: "string"}
