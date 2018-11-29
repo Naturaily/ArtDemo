@@ -20,7 +20,7 @@ class SiteHeader extends React.Component {
                 <Link to="/aktualnosci" className="link--muted">Aktualnosci</Link>
               </div>
             </div>
-            <div className="col ml-auto app__user-panel pr-sm-0">
+            <div className="col-sm-2 ml-auto app__user-panel pr-sm-0">
               <Link to="https://artinfodemo.naturaily.eu/logowanie" className="link--muted">Logowanie</Link>
             </div>
           </nav>
