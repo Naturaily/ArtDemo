@@ -21,7 +21,7 @@ class SiteHeader extends React.Component {
               </div>
             </div>
             <div className="col-sm-2 ml-auto app__user-panel pr-sm-0">
-              <Link to="https://artinfodemo.naturaily.eu/logowanie" className="link--muted">Logowanie</Link>
+              <a href="/logowanie" className="link--muted">Logowanie</a>
             </div>
           </nav>
         </div>

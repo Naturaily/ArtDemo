@@ -16,7 +16,7 @@ class PromotedAuctions extends React.Component {
 
   componentDidMount() {
 
-    const apiUrl = "https://artinfo.naturaily.eu/api/v1/landing_page/upcoming/auctions_catalogs"
+    const apiUrl = "/api/v1/landing_page/upcoming/auctions_catalogs"
 
     axios.get(apiUrl)
     .then(response => dataFormatter.deserialize(response.data))
@@ -46,9 +46,9 @@ class PromotedAuctions extends React.Component {
           {this.state.latestAuctions.map(auction => (
             <div key={auction.id} className="auctions_promoted-auction col-sm-4">
               <div className="auctions_promoted-image">
-                <Link to={`/katalogi-aukcyjne/${auction.slug}`}>
+                <a href={`/katalogi-aukcyjne/${auction.slug}`}>
                   <img src={auction.thumb} />
-                </Link>
+                </a>
               </div>
               <div className="auctions_promoted-content">
                 <p>
@@ -56,17 +56,17 @@ class PromotedAuctions extends React.Component {
                   <small className="auctions_promoted-city">{auction.city}</small>
                 </p>
                 <h3 className="auctions_promoted-title">
-                  <Link to={`/katalogi-aukcyjne/${auction.slug}`}>
+                  <a href={`/katalogi-aukcyjne/${auction.slug}`}>
                     <Truncate>
                       {auction.name}
                     </Truncate>
-                  </Link>
+                  </a>
                 </h3>
                 <small className="auctions_promoted-type text--muted">{auction.auction_house}</small>
                 <br/>
-                <Link to={`/katalogi-aukcyjne/${auction.slug}`} className="btn btn__default">
+                <a href={`/katalogi-aukcyjne/${auction.slug}`} className="btn btn__default">
                   Zobacz Katalog
-                </Link>
+                </a>
               </div>
             </div>
           ))}
