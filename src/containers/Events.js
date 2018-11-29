@@ -50,7 +50,7 @@ export default withRouteData(({ events }) => (
           {events.map((singleEvent, index) => (
             <li key={index} className="aside_popular-post row">
               <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="aside_popular-image col-sm-4">
-                <img src={singleEvent.data.image} alt="" />
+                <img src={singleEvent.data.main_image} alt="" />
               </Link>
               <article className="aside_popular-details col-sm-8">
                 <span className="aside_popular-category">
