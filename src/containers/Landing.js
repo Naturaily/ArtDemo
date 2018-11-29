@@ -54,7 +54,11 @@ export default withRouteData(({ landing, posts, events }) => (
             <small>Artinforamcje <br/> 10.10.10</small>
           </Link>
           <h2 className="blog_posts-title">{singleEvent.data.title}</h2>
-          <p>{singleEvent.data.description}</p>
+          <p>
+            <Truncate lines={2}>
+              {singleEvent.data.description}
+            </Truncate>
+          </p>
           <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="blog_posts-more">Więcej</Link>
         </span>
       </div>

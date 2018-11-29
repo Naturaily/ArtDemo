@@ -21,7 +21,11 @@ export default withRouteData(({ posts }) => (
             <small>{post.data.category} <br/> 10.10.10</small>
           </Link>
           <h2 className="blog_posts-title">{post.data.title}</h2>
-          <p>{post.data.description}</p>
+          <p>
+            <Truncate lines={2}>
+              {post.data.description}
+            </Truncate>
+          </p>
           <Link to={`/${post.data.category}/${post.data.slug}`} className="blog_posts-more">Więcej</Link>
         </span>
       </div>
