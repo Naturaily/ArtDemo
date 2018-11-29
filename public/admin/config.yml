@@ -51,7 +51,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Kategoria", name: "category", widget: "string"}
+      - label: "Kategoria"
+        name: "category"
+        widget: "select"
+        options: ["Wydarzenia", "Targi", "Konkursy", "Relacje"]
       - label: "Pola SEO"
         name: "seo"
         widget: "object"
