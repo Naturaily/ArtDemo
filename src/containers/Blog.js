@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouteData, Link } from 'react-static'
+import Truncate from 'react-truncate';
 import BlogNavigation from '../components/BlogNavigation'
 import Search from '../components/Search'
 //
