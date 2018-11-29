@@ -90,3 +90,4 @@ collections:
       - label: "Galeria"
         name: "image_gallery"
         widget: "image"
+        required: false
