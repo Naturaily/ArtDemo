@@ -30,7 +30,7 @@ export default withRouteData(({ singleEvent }) => (
     <div className="post-main">
       <div className="row">
         <div className="post-body col-sm-12">
-          <p className="text-muted"><Markdown source={singleEvent.content} escapeHtml={false} /></p>
+          <p className="text-muted"><Markdown source={singleEvent.body} escapeHtml={false} /></p>
         </div>
       </div>
       <div className="post-footer row">

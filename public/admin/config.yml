@@ -76,7 +76,7 @@ collections:
       - label: "Obrazek główny"
         name: "main_image"
         widget: "image"
-      - {label: "Treść artykułu", name: "content", widget: "markdown"}
+      - {label: "Treść artykułu", name: "body", widget: "markdown"}
       - label: "Pola dodatkowe"
         name: "additional_fields"
         widget: "object"
