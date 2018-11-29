@@ -40,7 +40,7 @@ class IncommingAuctions extends React.Component {
     return (
       <div className="col-lg-4">
         <div className="latest_auctions row align-content-center flex-column">
-          <div class="latest_auctions-socials">
+          <div className="latest_auctions-socials">
             <a href="https://www.facebook.com/Artinfopl-111297295564594" target="_blank" className="icon icon-facebook"></a>
             <a href="https://twitter.com/artinfopl" target="_blank" className="icon icon-twitter"></a>
           </div>
@@ -61,9 +61,9 @@ class IncommingAuctions extends React.Component {
                     <small className="latest_auctions-separator">|</small>
                     {auction.state == "in_progress" ? (
                       <small className="latest_auctions-live text-right text-orange">
-                        <span class="icon icon-live">
-                          <span class="path1"></span>
-                          <span class="path2"></span>
+                        <span className="icon icon-live">
+                          <span className="path1"></span>
+                          <span className="path2"></span>
                         </span>
                         aukcja trwa
                       </small>
