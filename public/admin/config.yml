@@ -79,56 +79,11 @@ collections:
         widget: "object"
         fields:
           - {label: "Patronat Artinfo", name: "artinfo_patronage", widget: "boolean"}
+          - {label: "Post wyróżniony", name: "featured", widget: "boolean"}
           - {label: "Miejsce wystawy", name: "exhibition_location", widget: "string"}
-          - {label: "Post wyróżniony", name: "featured", widget: "string"}
       - {label: "Artyści", name: "artists", widget: "string"}
       - {label: "Galerie", name: "galleries", widget: "string"}
       - {label: "Patroni medialni", name: "patronage", widget: "string"}
-      - label: "Galeria"
-        name: "image_gallery"
-        widget: "image"
-
-  -
-    name: "fair"
-    label: "Targi"
-    folder: "src/blog/fair"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Kategoria", name: "category", widget: "string"}
-      - label: "Pola SEO"
-        name: "seo"
-        widget: "object"
-        fields:
-          - {label: "Tytuł meta", name: "meta_title", widget: "string"}
-          - {label: "Opis meta(150)", name: "meta_description", widget: "string"}
-      - label: "Status"
-        name: "status"
-        widget: "select"
-        options: ["nadchodząca", "trwająca", "archiwalna"]
-      - {label: "Tytuł artykułu", name: "title", widget: "string"}
-      - {label: "Slug(url)", name: "slug", widget: "string"}
-      - {label: "Data publikacji", name: "publication_date", widget: "date"}
-      - {label: "Data rozpoczęcia", name: "start_date", widget: "date", default: "", format: "D MMMM"}
-      - {label: "Data zakończenia", name: "end_date", widget: "date", default: "", format: "D MMMM YYYY"}
-      - {label: "Data wernisażu", name: "vernissage_date", widget: "datetime", default: "", format: "D.M.YYYY, kk:mm"}
-      - {label: "Krótki opis", name: "description", widget: "string"}
-      - {label: "Miasto", name: "city", widget: "string"}
-      - label: "Obrazek główny"
-        name: "main_image"
-        widget: "image"
-      - {label: "Treść artykułu", name: "content", widget: "markdown"}
-      - label: "Pola dodatkowe"
-        name: "additional_fields"
-        widget: "object"
-        fields:
-          - {label: "Patronat Artinfo", name: "artinfo_patronage", widget: "boolean"}
-          - {label: "Miejsce wystawy", name: "exhibition_location", widget: "string"}
-          - {label: "Post wyróżniony", name: "featured", widget: "string"}
-      - {label: "Artyści", name: "artists", widget: "string", required: false}
-      - {label: "Galerie", name: "galleries", widget: "string", required: false}
-      - {label: "Patroni medialni", name: "patronage", widget: "string", required: false}
       - label: "Galeria"
         name: "image_gallery"
         widget: "image"
