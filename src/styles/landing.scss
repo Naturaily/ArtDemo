@@ -76,6 +76,9 @@
 
   &-live {
     display: flex;
+    color: $color-manatee;
+    font-size: 12px;
+    text-decoration: none;
     .icon {
       font-size: 20px;
       margin-right: 5px;
@@ -168,10 +171,12 @@
 
 .Landing .adw_top {
   display: flex;
-  width: 100%;
+  width: 50%;
   height: 180px;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: auto;
+  margin-top: 30px;
 }
 
  .Landing .search_box {

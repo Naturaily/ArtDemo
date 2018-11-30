@@ -25,6 +25,7 @@
     }
 
     .blog_posts-box {
+      display: flex;
       background: #fff;
       width: 50%;
       height: 280px;
@@ -37,7 +38,7 @@
 
     .blog_posts-more {
       margin-top: auto;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #363A42;
     }
 

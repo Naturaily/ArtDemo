@@ -7,6 +7,7 @@ import Carousel from 'react-flex-carousel'
 import IncommingAuctions from '../components/IncommingAuctions'
 import PromotedAuctions from '../components/PromotedAuctions'
 import OldAndModernAuctions from '../components/OldAndModernAuctions'
+import YoungAuctions from '../components/YoungAuctions'
 import Search from '../components/Search'
 
 //
@@ -41,6 +42,8 @@ export default withRouteData(({ landing, posts, events }) => (
 
     <OldAndModernAuctions/>
 
+    <YoungAuctions/>
+
     {posts.slice(0, 1).map((singleEvent, index) => (
       <div key={index} className={`blog_posts-post ${index === 0 ? 'blog_posts-first_post' : ''}`}>
         <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`} className="blog_posts-image">
@@ -51,7 +54,7 @@ export default withRouteData(({ landing, posts, events }) => (
         </Link>
         <span className="blog_posts-box text-center flex-column">
           <Link to={`/${singleEvent.data.category}/${singleEvent.data.slug}`}>
-            <small>Artinforamcje <br/> 10.10.10</small>
+            <small>{singleEvent.data.category} <br/> {singleEvent.data.start_date} - {singleEvent.data.end_date}</small>
           </Link>
           <h2 className="blog_posts-title">{singleEvent.data.title}</h2>
           <p>

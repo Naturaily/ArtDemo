@@ -8,7 +8,7 @@ import Jsona from 'jsona';
 
 const dataFormatter = new Jsona();
 
-class OldAndModernAuctions extends React.Component {
+class YoungAuctions extends React.Component {
   state = {
     latestAuctions: [],
     store: []
@@ -16,7 +16,7 @@ class OldAndModernAuctions extends React.Component {
 
   componentDidMount() {
 
-    const apiUrl = "/api/v1/landing_page/upcoming/auctions_catalogs"
+    const apiUrl = "https://artinfo.naturaily.eu/api/v1/landing_page/upcoming/auctions_catalogs"
 
     axios.get(apiUrl)
     .then(response => dataFormatter.deserialize(response.data))
@@ -41,7 +41,7 @@ class OldAndModernAuctions extends React.Component {
     return (
 
       <section>
-        <h2 className="section_header">Aukcje sztuki dawnej i współczesnej</h2>
+        <h2 className="section_header">Aukcje Sztuki Młodej</h2>
         <div className="auctions_category-auctions row">
           {this.state.latestAuctions.map(auction => (
             <div key={auction.id} className="auctions_category-auction col-sm-2">
@@ -84,5 +84,5 @@ class OldAndModernAuctions extends React.Component {
 }
 
 export default () => (
-  <OldAndModernAuctions/>
+  <YoungAuctions/>
 )

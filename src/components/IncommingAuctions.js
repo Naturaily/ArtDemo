@@ -60,13 +60,13 @@ class IncommingAuctions extends React.Component {
                     </small>
                     <small className="latest_auctions-separator">|</small>
                     {auction.state == "in_progress" ? (
-                      <small className="latest_auctions-live text-right text-orange">
+                      <a href={`/katalogi-aukcyjne/${auction.slug}/live`} className="latest_auctions-live text-right text-orange">
                         <span className="icon icon-live">
                           <span className="path1"></span>
                           <span className="path2"></span>
                         </span>
                         aukcja trwa
-                      </small>
+                      </a>
                     ) : (
                       <small className="text-right"><Moment format="HH.mm">{auction.date}</Moment></small>
                     )}

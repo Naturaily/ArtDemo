@@ -20,7 +20,7 @@ class PromotedAuctions extends React.Component {
 
     axios.get(apiUrl)
     .then(response => dataFormatter.deserialize(response.data))
-    .then(response => response.slice(0, 4).map(auction => (
+    .then(response => response.slice(0, 6).map(auction => (
       {
         id: auction.id,
         state:         auction.state,
